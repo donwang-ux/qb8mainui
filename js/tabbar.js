@@ -125,6 +125,7 @@
 		tabslayout();
 		marktab();
 		$(".tab").removeClass('prevtabtemp nexttabtemp');
+		framechange();
         if ($.isFunction(callback)) {
             callback();
         }

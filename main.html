@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>P R O T O T Y P E</title>
+	<link rel="stylesheet" type="text/css" href="shared/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+
+</head>
+<body>
+<div class='wallpaper'></div>
+<div class="title">Prototype</div>
+<!-- <div class="shadow"></div> -->
+<div id="debug">
+	<button onclick="layout1()">tab上置</button>
+	<button onclick="layout2()">tab下置</button>
+	<button onclick="bookmarkbarshow()">显示书签栏</button>
+	<button onclick="bookmarkbarhide()">隐藏书签栏</button>
+</div>
+<div class="browser" id="browser">
+	<div class="bar" id="tabbar">
+		<ul id="tabs">
+			<li class="tab tab_current"><img class="favicon" src="http://www.baidu.com/favicon.ico"><span class="tabtitle">百度一下，你就知道</span><div class="tabclose"></div></li>
+			<li class="tab tab_back"><img class="favicon" src="http://mail.qq.com/favicon.ico"><span class="tabtitle">QQ邮箱</span><div class="tabclose"></div></li>
+			<li class="tab tab_back"><img class="favicon" src="http://www.zhihu.com/favicon.ico"><span class="tabtitle">首页 - 知乎</span><div class="tabclose"></div></li>
+			<li class="tab tab_back"><img class="favicon" src="http://www.douban.com/favicon.ico"><span class="tabtitle">豆瓣</span><div class="tabclose"></div></li>
+		</ul>
+		<div id="newTab"></div>
+	</div>
+
+	<div class="bar" id="toolbar">
+		<div class="btn btn_back disabled"><div class="btnicon"></div></div>
+		<div class="btn btn_forward disabled"><div class="btnicon"></div></div>
+		<!-- <div class="btn btn_refresh"><div class="btnicon"></div></div> -->
+		<div class="btn btn_homepage"><div class="btnicon"></div></div>
+		
+		<div id="omnibox">
+			
+			<div class="omnibtn omnibtn_fav"></div>
+			
+			<input id="omniinput" value="www.baidu.com"></input>
+
+			<div class="omnibtn omnibtn_refresh"></div>
+			<!-- <div class="omnibtn omnibtn_sheild"></div> -->
+			<div class="omnibtn omnibtn_qr"></div>
+			
+		</div>
+		<div class="btn btn_wechat"><div class="btnicon"></div></div>
+		<div class="btn btn_bookmark"><div class="btnicon"></div></div>
+		<div class="btn btn_appbox"><div class="btnicon"></div></div>
+		<div class="btn btn_menu"><div class="btnicon"></div></div>
+<!-- 		<div class="btn btn_download"></div>
+		<div class="btn btn_recover"></div>
+		<div class="btn btn_screenshot"></div>
+		<div class="btn btn_share"></div> -->
+	</div>
+	<div class="bar" id="bookmarkbar"></div>
+	<div class="floatbar" id="appbar"></div>
+	<div id="sysbar"></div>
+	
+	<div class="webview" id="web">
+		<iframe src="http://www.baidu.com" width="100%" height="100%" id="frame1" class="frame showframe"></iframe>
+		<iframe src="http://mail.qq.com" width="100%" height="100%" id="frame2" class="frame"></iframe>
+		<iframe src="http://www.zhihu.com" width="100%" height="100%" id="frame3" class="frame"></iframe>
+		<iframe src="http://www.douban.com" width="100%" height="100%" id="frame4" class="frame"></iframe>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="shared/jquery.js"></script>
+<script type="text/javascript" src="./js/tabbar.js"></script>
+<script type="text/javascript" src="./js/toolbar.js"></script>
+<script type="text/javascript" src="./js/layout.js"></script>
+</body>
+</html>

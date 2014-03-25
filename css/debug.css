@@ -1,0 +1,9 @@
+.btn_menu{
+	background: url('../images/browser_menu_normal.png');
+}
+.btn_menu:hover{
+	background: url('../images/browser_menu_hover.png');
+}
+.btn_menu:active{
+	background: url('../images/browser_menu_pressed.png');
+}

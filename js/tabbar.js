@@ -35,8 +35,10 @@
 	//切换当前frame
 	function framechange(){
 		var frametarget = $('#tabs').children('.tab_current').index('ul li');
-		$('#web').children().eq(frametarget).siblings().removeClass('showframe');
-		$('#web').children().eq(frametarget).addClass('showframe');
+		var $frame = $('#web').children().eq(frametarget);
+		$frame.siblings().removeClass('showframe');
+		$frame.addClass('showframe');
+		$('#omniinput').val($frame.attr("src"));
 	}
 	//单击切换当前tab
 	function tabclick(){

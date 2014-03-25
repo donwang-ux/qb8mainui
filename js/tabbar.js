@@ -54,6 +54,8 @@
 
     function activateTab($tab) {
         $tab.siblings().removeClass("tab_current");
+        $tab.siblings().addClass("tab_back");
+        $tab.removeClass("tab_back");
         $tab.addClass("tab_current");
         //点击某tab，切换iframe展示
         framechange();
@@ -72,16 +74,16 @@
 		$('.tab_current').siblings().addClass("tab_back");
 	}
 	//标记悬停tab的前后tab
-	// function marktab(){
-	// $('.tab_back').mouseover(function(){
-	// 	$(this).prev(".tab_back").addClass('prevtab');
-	// 	$(this).next(".tab_back").addClass('nexttab');
-	// });
-	// $('.tab_back').mouseout(function(){
-	// 	$(this).prev(".tab_back").removeClass('prevtab');
-	// 	$(this).next(".tab_back").removeClass('nexttab');
-	// });
-	// }
+	function marktabtempover($tab){
+		$(".tab").removeClass('prevtabtemp nexttabtemp');
+		$tab.prev(".tab_back").addClass('prevtabtemp');
+		$tab.next(".tab_back").addClass('nexttabtemp');
+	}
+	function marktabtempout($tab){
+		$(".tab").removeClass('prevtabtemp nexttabtemp');
+		$tab.prev(".tab_back").removeClass('prevtabtemp');
+		$tab.next(".tab_back").removeClass('nexttabtemp');
+	}
 
 	//点击新tab按钮
 	$('#newTab').click(function(){
@@ -122,6 +124,7 @@
 		}
 		tabslayout();
 		marktab();
+		$(".tab").removeClass('prevtabtemp nexttabtemp');
         if ($.isFunction(callback)) {
             callback();
         }
@@ -147,7 +150,12 @@
     }).on('dblclick', '.tab', function() {
         closeTab($(this), function() {
             // alert('这是通过双击关闭的，么么哒~~~~');
-        });
+        })
+
+    }).on('mouseover', '.tab', function() {
+        marktabtempover($(this));
+    }).on('mouseout', '.tab', function() {
+        marktabtempout($(this));
     });
 
 
@@ -157,3 +165,4 @@
 	//tabclick();//tab绑定点击事件
     activateTab($($('#tabs').children()[0]));
 	marktab();
+	marktabtemp();

@@ -104,10 +104,10 @@ html,body{
 .tab:not(.tab_current) .favicon{
 	opacity:0.5;
 }
-.tab.prevtab{
+.tab.prevtab,.tab.prevtabtemp{
 	border-right-color: transparent;
 }
-.tab.nexttab{
+.tab.nexttab,.tab.nexttabtemp{
 	border-left-color: transparent;
 }
 #tabs{

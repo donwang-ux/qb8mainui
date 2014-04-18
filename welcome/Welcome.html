@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Welcome</title>
+	<link rel="shortcut icon" href="http://browser.qq.com/images/favicon.ico"/>
+	<style>
+		body{overflow:hidden;padding:0;margin:0;background-color: #fff}
+		.imgbg{position:absolute;left:50%;top:50%;margin:-500px 0 0 -800px;z-index:1;}
+	/*	.gotobtn{border-radius: 2px;transition: background linear 0.1s;width:204px;height:64px;position: absolute;display: block;z-index: 2;}
+		.iconbtn{transition: background linear 0.1s;width:200px;height:200px;position: absolute;display: block;z-index: 2;left:50%;top:50%;margin:-110px 0 0 -100px; }
+		#appCenterBtn{background: url("images/7.6btn1.png") top center no-repeat;left:50%;top:50%;margin:120px 0 0 -214px; }
+		#appCenterBtn:hover{background: url("images/7.6btn1.1.png") top center no-repeat;}
+		#wechatDlBtn{background: url("images/7.6btn2.png") top center no-repeat;left:50%;top:50%;margin:120px 0 0 10px; }
+		#wechatDlBtn:hover{background: url("images/7.6btn2.1.png") top center no-repeat; }
+		#wechatDlBtn1{background: url("images/7.6btn3.png") top center no-repeat;}
+		#wechatDlBtn1:hover{background: url("images/7.6btn3.1.png") top center no-repeat; }*/
+
+		.off{display:none;}
+		.copyright{position:absolute;z-index:3;color:#bbb;font-size:10px;font-family: 'Segoe UI','Microsoft yahei','微软雅黑',Tahoma,Verdana,Arial,sans-serif;left:50%;margin-left:-100px;text-align:center;bottom:25px;width: 200px;}
+	/*	#preloader{
+			background: url("welcome.png") no-repeat -9999px -9999px, url("images/7.6btn2.1.png") no-repeat -9999px -9999px, url("images/7.6btn3.1.png") no-repeat -9999px -9999px;
+			display: inline;
+			}*/
+	</style>
+</head>
+<body>
+	<script>
+	var browserType = navigator.userAgent;
+	var selfBrowserVersion = browserType.indexOf("MSIE") > 0 ?  browserType.indexOf("MSIE") + 5 : 0;
+	if (selfBrowserVersion == 0) {
+		selfBrowserVersion = browserType.indexOf("rv:") > 0 ?  browserType.indexOf("rv:") + 3 : 0;
+	}
+	var version0 = browserType.charAt(selfBrowserVersion);
+	var version1 = browserType.charAt(selfBrowserVersion + 1);
+	var selfVersion = parseInt(version0+version1, 10);
+	</script>
+	<img src="welcome.png" class="imgbg" width="1600" height="1000" />
+	<!--a href="http://app.browser.qq.com" target="_self" class="gotobtn" title="欢迎光临！" id="appCenterBtn" onclick='report("BROWSER.ACTIVITY.QB7.APPCENTER")' ></a-->
+	<!--a href="http://app.browser.qq.com/?id={5FD65AEB-B895-446A-915D-72B6D4886A0E}&action=install" target="_self" class="gotobtn" title="直接安装微信聊天" id="wechatDlBtn" onclick='report("BROWSER.ACTIVITY.QB7.WECHATINSTALL")' ></a-->
+	<!--a href="http://app.browser.qq.com/?id={5FD65AEB-B895-446A-915D-72B6D4886A0E}&action=install" target="_self" class="iconbtn" title="直接安装微信聊天" id="wechatDlBtn1" onclick='report("BROWSER.ACTIVITY.QB7.WECHATINSTALL")' ></a-->
+	<div class="copyright">保密方案 请勿外流</div>
+	<!-- <div id="preloader"></div> -->
+<script>
+//	function getIEStyle() {
+		//if (selfVersion > 9) {
+//			document.getElementById('link1').className = 'link off';
+			//document.getElementById('link1a').className = 'link';
+		//} else {
+			//document.getElementById('link1').className = 'link';
+			//document.getElementById('link1a').className = 'link off';
+			//return false;
+		//}
+	//} 
+ // //IE6 PNG透明
+ // var version = 0.0;
+ //    function fixPng() { 
+ //        var arVersion = navigator.appVersion.split("MSIE") 
+ //        version = parseFloat(arVersion[1]) 
+ //        if ((version >= 5.5 && version < 7.0) && (document.body.filters)) {
+ //            var lens  = document.images.length;
+ //            for(var i = 0; i < lens; i++) {
+ //                var img = document.images[i]; 
+ //                var imgName = img.src.toUpperCase(); 
+ //                if (imgName.indexOf(".PNG") > 0) { 
+ //                    var width = img.width; 
+ //                    var height = img.height; 
+ //                    var sizingMethod = (img.className.toLowerCase().indexOf("scale") >= 0)? "scale" : "image"; 
+ //                    img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + img.src.replace('%23', '%2523').replace("'", "%27") + "', sizingMethod='" + sizingMethod + "')"; 
+ //                    img.src="./images/blank.gif"; mce_src="./images/blank.gif"; 
+ //                    img.width = width; 
+ //                    img.height = height; 
+ //                } 
+ //            } 
+ //        } 
+ //    } 
+ //    fixPng();
+ //getIEStyle();
+</script>
+</body>
+</html>

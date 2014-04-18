@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)newtab/ -->
+<html lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>常用网站</title>
+	<style>html, body{
+    height: 100%;
+	padding: 0;
+	margin: 0;
+	-webkit-user-select: none;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: 'Segoe UI','Microsoft yahei','微软雅黑',Tahoma,Verdana,Arial,sans-serif;
+}
+
+body{
+	/*background: #fafafa;*/
+	background-image: -webkit-linear-gradient(top, #fbfbfb 0%, #f9f9f9 100%);
+}
+
+div, span {
+	padding: 0;
+	margin: 0;
+}
+
+.off{display: none;}
+
+ul{
+	list-style: none;
+	-webkit-padding-start: 0;
+	font-size: 12px;
+}
+
+/*页面主容器*/
+
+.wrapper{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	width: 100%;
+}
+
+.searchbox{
+	width: 600px;
+	height: 10%;
+	position: absolute;
+	top: 12%;
+	left: 50%;
+	margin-left: -300px;
+}
+
+.out{
+	min-width: 340px;
+	max-width: 1360px; /*截图最大尺寸312px，加28乘4*/
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 23%;
+	left: 15%;
+	right: 15%;
+	bottom: 10%;
+}
+#cellWrapperDummy{
+	position: relative;
+	width: 100%;
+}
+
+/*常用网站格子*/
+
+#cellDummy{
+	position: absolute;
+	width: 100%;
+	display: block;
+	top: 0;
+}
+
+.out a:nth-of-type(1){
+	left:0;
+	top: 0;
+}
+.out a:nth-of-type(2){
+	left:25%;
+	top: 0;
+}
+.out a:nth-of-type(3){
+	left:50%;
+	top: 0;
+}
+.out a:nth-of-type(4){
+	left:75%;
+	top: 0;
+}
+.out a:nth-of-type(5){
+	left:0;
+	top: 50%;
+}
+.out a:nth-of-type(6){
+	left:25%;
+	top: 50%;
+}
+.out a:nth-of-type(7){
+	left:50%;
+	top: 50%;
+}
+.out a:nth-of-type(8){
+	left:75%;
+	top: 50%;
+}
+
+.contain{
+	-webkit-user-select: none;
+	/*width: -webkit-calc(25% - 24px);*/
+	width: 22.4%;
+	/*height: -webkit-calc(50% - 36px);*/
+	/*min-width: 160px;*/
+	max-width: -webkit-calc(312px + 2.6%);
+	position: absolute;
+	display: block;
+	/*float: left;*/
+	/*padding: 12px 12px 0px 12px;*/
+	padding: 1% 1.3% 0 1.3%;
+	text-align: center;
+	transition: left 0.2s ease-in-out,top 0.2s ease-in-out;
+	color: black;
+	margin-bottom: 1%;
+	-webkit-appearance: none;
+	outline: none;
+}
+
+.front{
+	border-radius: 2px;
+	overflow: hidden;
+	opacity: 1;
+	background: #fff;
+	position: relative;
+	-webkit-backface-visibility: hidden;
+	transition: box-shadow 0.2s ease-out,-webkit-transform 0.2s ease-out;
+	/*box-shadow: 0px 0px 1px rgba(0,0,0,0.06),0px 0.5px 3px 1px rgba(0,0,0,0.1);*/
+	box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.14);
+}
+
+.contain:hover .front, 
+.contain:focus .front {
+	-webkit-transform: scale3d(1.02,1.02,1);
+	transition: box-shadow 0.15s ease-in,-webkit-transform 0.15s ease-in;
+/*	box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.06),0px 15px 30px rgba(0,0,0,0.13);*/
+	box-shadow: 0px 15px 30px rgba(0,0,0,0.16);
+	/*border-radius: 4px;*/
+}
+
+.front img.thumbnail{
+	width: 100%;
+	display: block;
+	/*transition: All 0.4s;*/
+	-webkit-user-drag:none!important;
+	image-rendering: -webkit-optimize-contrast;/*解决scale导致的图片模糊问题*/
+	max-width: 312px;
+	max-height: 238px;
+}
+
+.front .mask, .backface .mask{
+	display:none;
+}
+
+.close{
+	width: 18px;
+	height: 18px;
+	background: rgba(0,0,0,0) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2xpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowRUNGNDdDRDFFOUIxMUUzQkU3M0MxNTQxQ0QyQUMyNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowODFFRjMzNDI5NTQxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowODFFRjMzMzI5NTQxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6YzVhM2FmZGYtNTA3NS00YWE4LTllN2MtODlkZDY0ZjgzMjExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjBFQ0Y0N0NEMUU5QjExRTNCRTczQzE1NDFDRDJBQzI0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+jur+VQAABNVJREFUeNrMWElPG1kQbtp2HIzBMSaDI7NMCFkm4RgwixWhIEb8AG4sJy6IG3ABAQdA7AKJCxdOLBd+AQIxKIkZsBluIZpoMkYg7JiJTTAEO44XUoWqo47V3XQ7ZpQnldxuv/fqc71avnppFxcXjMKRDpILchvECKIH0dBvEZBPIB9BPoAc5eXlhaQ2Ozw8/O57mgJAd0EKQe4o/APvQfYB2F6qAFlAHpJVGJ/Pp15YWMh1OBym/f39rOPj44xQKKS6NF16eiw7O/u8sLDw1Gq1+hsbG49ycnKitM8RyFsA5v4RQFaQInzY2dnRjY2N3Xc6nZZIJKKSYxqNRhMrKytzd3Z2vistLT2n1y4A5VAKSAtSCWI+Oztj29vbH62srNyNxWIsk8RQqVTx2tpa19TU1NvMzMw4vPKC/AnAwnIA3QR5BmLa3t7OaGtre+rxeLKYFAyz2RyYmZn5C6wVhK9+kJcgn/lzhP5xBYJZXl6+1dTUVJUqMDi8Xq8B9rTh3qiDdEla6NJnwDK6hoYGWzAY1DLXMHQ6XXhxcdFOlnKBOIQAYTQ9CwQCKjhvWyotI3J8p2tra3aDwRCjo3MnHhmGNgMR8fC6wdDxZXV0dDzg6+YDwqSXi04M0VQkEilpo6OjJYODg49Z9upgwzk4d2RkpATXCs1ZXV29hzopxxXxAWEGZiYmJoohtAUXDw0NPamqqrJUV1fnw3OJFCj8DefgXJvNZsG1QvNQ1/j4+H0+BpZq0x3IwCpMemJKYPE3ZyMlgqA4MDiHexeNRkWzL+i81I1uhf7O0gMD5cAslYF7enp2NzY23FKghMDY7XZ3b2/vrti+AFY9Nzdnpq+5LFVtZnNz0yTlE/F4nOnq6notBkoMTHd392tcKzWwLtLjbQz73zFJVVZW2g4ODoxynHV4eLgE/YmvmAOoFAyO/Pz8EzDIK8zeLPEZrOIZcsKVsxQHggOSLBgcfr9fR496liNX4XBYLTeHoCJUyAeVLJgE3RqW+ckGS7ST0Wq1UdmLBBxYTkoQGzzdEZY4MAPM7lwuGHTqRJ9J9CkloEwmU5AeP+GKE/L002QjDH0m0aeUgCooKOB0n7DUHTAVFRX+ZMGgAws5ulxQwL999PiBJTrJACH3IgcWWzQwMPBEDIxU9CEoXCu2r1qtjjY3N3u5RgABYd/0HnwoBoTJI7EwTU5oC4Hir00c0ARc6ibDBDmChqXfikyxvr7+uVDFRwqBVRvqXbyvr+/NVXkGj6m/v/8xWJ0FgLv84szb82JpaWkdjuycWKOLzxifY3FraWn5DThv8f+Rc+rq6v6dnZ19Qz3bH6IUtqamxoaM7pop7BkQNLvRaIyKUVh84UKOC63KNhLx6wKDe4MOJ4HZ48AItUF4jl7sBqanp516vT7loHBP3Js6DnTkLSWNoq61tbU0VceHx4SWUdoo4oQXnKXW19dfgfO9w4hIumCybBwdGPZ6ybPMC2ilP1/VKIpeNgCry5icnCyGTwvQTlmXDZB/8LLBA+3OPxTaSV82SF7HzM/P/7K1tZUDDNMA5Cod+MwNqtpfoFCGoDYFysvLfdA2H1HSw/EfyN8/eh2TeGH1K9cUKOkJ6cLKJefCSq1g4z0SHe9K7xZR4Bs05wvRmRPelV5QCfqvAgwAcgO7RnwkCT8AAAAASUVORK5CYII=') no-repeat 3px 3px;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	opacity: 0;
+	transition: opacity 0.1s ease-out;
+	padding: 3px;
+	border-radius: 12px;
+	background-size: 18px 18px;
+}
+
+.contain:hover .close{
+	opacity: 1;
+	transition: opacity 0.15s ease-in 0.06s;
+}
+
+.close:hover{
+	background: rgba(0,0,0,0) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2xpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowRUNGNDdDRDFFOUIxMUUzQkU3M0MxNTQxQ0QyQUMyNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3RDVBNTk3RDI5NTUxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3RDVBNTk3QzI5NTUxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzlhYTZkNTMtODk5NC00Mjg2LTg1YzAtODZkMWMwMjBlYTZhIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjBFQ0Y0N0NEMUU5QjExRTNCRTczQzE1NDFDRDJBQzI0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+1B18zAAABMFJREFUeNrMWN1PE1kUPx2EUrR8bALSRXabYkJZjGvkw2c0kU0TLNG4DwbQ5436Jwj/gjG+o9QXo9CEtBETP16tceMSmkICRN3VqqxCqW3FynTPOXMHxjIzzGDdeJIznence36/uefee865jkKhADZlD2oz6j7UBtQa1Arx7hNqCvUt6j+of4PD8cHUWhH+LhtE2lH9qF6TNi6hjagHBeAzvM4isbgVECuEfKgdqD/x0/JyGYRCNfDgwR6Yna2CZNIJmYzE73bvlsHjWQO/Pws9PR9gYCAFdXVe/ohC4Rf8/ROJLZiBObZxWS/qAb6bnnbCpUuNMDX1A3z8KFka08pKGXp738PIyGs4dGhN/DuDpKaMXGZEiIY9wF+WyTjg/PkmuHGjAfJ5B+xEyssLcObMG7h69RWOIgE+R40gsZwVQlWo/ageePrUCadPt8D8vAtKIT5fFm7fXhSjlUQNo2a1TfSGPsBk7t2rwnnQWjIyJIuLik2yTRgKFpgR+g31Zx6Zkyf3w8pKOZRayCbZJgzCUjB1Cfl4aafTErtpdbX0ZFQh26dOtTCWsp206BHq5OvFiz+W1E3G7nPBhQse8dRRTKidd18axrGxBoOV4oBI5AiEw10gWVj11IbaRiLd3FdPQqG9wnXNgsMGIT9fR0YaYX1dv3M43A2BgA+Cwf0wOdltSoreURtqGwi0cF89IazhYY+WgyRikxd3YIk3PSOR5c39gUCMSKlkqM0msGxo9+7dOsZWQpJb2ggJoVCt6Q4cDMYgGl00JaVHJhpdgP7+x4Z2CfP69Vrx1CyJqA1w/77bdE7I+JF9fY8MSRmR6euLcV8zefhQxd5HwbWeb+fmtl9ZKqnJSeD5tElqk6BdMiSJhIpdT6HjD45dNTW/4v5gLR3RGw2t2CFDUl39GVKpv/AuRy5z8p+5XJnlPUQZqRgDfy2ZL7GdEnxnQoSUPMXlWrfey8RlZluCYZ65gb0miRwYoKlpzQaZI1smsNZ9dklRlqlIinos8W1ra84GGd+WOVM8p+yQ8vtV7CVJVAcAR4+md0yGJrDeRLdKqqdHxX5JLV/w7cDACufARkKB0oiM2epTYlmXad49NLQinl4QIaqbnmF1IMPx48uGHcvKJEtLW4+Utm+xECZhEweAtJpTt3PmRqlAZ2e7bsSnFIKidj4vY8b3eNt9htw0Pt6F/SSMZTHsV9D5yALEYnE4fJgm9R3UuDbJ/53zknPnmuDatcb/ZdM5e/YNjI4qFS7AzeKM8Qlfr1xJYnWQ++ZkvN4cXL786gvsIkLk8zi43TKWKgsYX/LfjAzZnphYwPgpM6aCrVt13OEijuqm8fF5qK0tPSmySbaV2uy5wDSty6JcxB07lsX6fa6k7iM3kU2yrRSK0e3qMhCV5MTGSE1PJ3DyveYVsVOhvjSBZ2YSmpGZwFI6a4UQJwSot/hggGrx0dGXvDyDwX+hosJ6XkFtT5x4x31pNSl1PR023OK6fgenHyCKuA5RqijHMWNj1Tj01ZzpJZMVkMnsEscxnzFQfoK2thyGg1UYHEyJTQ/E0n6y5TjG4umH0YFVmyh/7Qi5J2F4YPUVJ2hxoW7NkV69ONJzqvmMSGeWNEd6aTvs/xNgAIhyEx5IZ8v5AAAAAElFTkSuQmCC') no-repeat 3px 3px;
+	background-size: 18px 18px;
+}
+
+.contain:hover .backface{
+	color: rgb(0,0,0);
+}
+.backface{
+	margin-top: 3%;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: rgb(100,100,100);
+}
+
+.backface span{
+	display: inline-block;
+	width: 90%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 20px;
+	line-height: 20px;
+}
+
+.backface .text .url{
+	display: none;
+}
+.empty .front{
+	background: rgba(255,255,255,0.5);
+	box-shadow: inset 0px 1px 0px #fff,0px 0px 1px 1px rgba(0,0,0,0.05);
+	cursor: default;
+}
+
+.empty:hover .front{
+	box-shadow: inset 0px 1px 0px #fff,0px 0px 1px 1px rgba(0,0,0,0.05);
+	-webkit-transform: none;
+}
+
+.empty img {
+	opacity: 0;
+	transition: opacity 0.3s;
+	-webkit-transform: none;
+	image-rendering: auto!important;/*此图无需解决scale导致的图片模糊问题*/
+}
+
+.empty:hover img{
+	opacity: 1;
+}
+
+.empty .close{
+	display: none;
+}
+
+
+/*搜索栏*/
+#poparea{
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+	background: white;
+	position: absolute;
+	left: 50%;
+	width: 600px;
+	top: 40px;
+	border-radius: 4px;
+	z-index: 150;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	padding: 0;
+	margin: 0 0 0 -300px;
+	transition: opacity 0.1s linear,width 0.2s ease-out,top 0.2s ease-out,margin 0.2s ease-out;
+	opacity: 1;
+}
+
+#poparea.hide{
+	width: 580px;
+	margin: 0 0 0 -290px;
+	top: 36px;
+}
+
+.hide {
+	pointer-events: none;
+	opacity: 0!important;
+}
+.show{
+	pointer-events: auto;
+	opacity: 1;
+}
+
+#poparea>li{
+	width: -webkit-calc(100% - 40px);
+}
+
+.soso_SmartPop {
+	width: 600px;
+	z-index: 199;
+	position: relative;
+	padding: 5px 0;
+	border-bottom: 1px solid #eee;
+	margin-left: 40px;
+}
+
+
+.searchbox .suggestlayerout,.searchbox .suggestlayerouts{
+	width: 135px;
+	background-color: #fff;
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	padding: 5px 0;
+	z-index: 200;
+	border-radius: 2px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+	overflow: hidden;
+}
+
+
+/*----------*/
+.searchbox{
+	width: 600px;
+	height: 10%;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	margin-left: -300px;
+}
+
+.searchbox .inputarea {
+	width: 100%;
+	height: 34px;
+}
+/*
+.searchbox .inputarea .inputstyle {
+	width: 100%;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: relative;
+}
+*/
+#smart_input{
+	line-height: 1.6em;
+	height: 2.25em;
+	border: 0;
+	font-size: 15px;
+	font-family: "HelveticaNeue-Light",'Hiragino Sans GB',sans-serif;
+	position: absolute;
+	top: 0px;
+	right: 0;
+	left: 50%;
+	padding: 0 0 0 260px;
+	width: 260px;
+	margin: 0 0 0 -260px;
+	transition: background-color 0.2s linear,
+	padding 0.2s linear,width 0.2s linear, margin 0.2s linear,color 0.2s linear;
+	background: none;
+	background-color: rgba(0,0,0,0.06);
+	border-radius: 4px;
+	color: rgba(0,0,0,0);
+}
+
+#smart_input.open{
+	color: rgba(0,0,0,1);
+	padding: 0 90px 0 40px;
+	width: 470px;
+	margin: 0 0 0 -300px;
+	background-color: rgba(0,0,0,0.04)
+}
+
+
+#searchBtn{
+	min-width: 34px;
+	/*height: 34px;*/
+	height: 2.55em;
+	line-height: 34px;
+	letter-spacing: 0.5px;
+	vertical-align: middle;
+	border: none;
+	color: #888;
+	background: rgba(255,255,255,0);
+	position: absolute;
+	right: -2px;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.05s linear,background 0.1s linear,color 0.1s linear;
+	transition-delay: 0s;
+	font-size: 13px;
+	font-weight: normal;
+	font-family: "HelveticaNeue-Light",'Hiragino Sans GB',sans-serif;
+	text-align: right;
+	padding: 0 20px 0 12px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2dpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGQzdGMTE3NDA3MjA2ODExQjFBNDk0RjQ3NTg5QjEyNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QkIzRDZBNDI5NTIxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0QkIzRDZBMzI5NTIxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMkFGMDAzNDI0OTcxMUUzQjAzOUQ1MTdEREU1MkI1OSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMkFGMDAzNTI0OTcxMUUzQjAzOUQ1MTdEREU1MkI1OSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pj2gcPwAAAEqSURBVHjaYvz//z/DYAZMDIMcjDpw1IGjDhx14Eh3IAslmhkZGUlST06tNSKimAOII4BYY9BFMRQEALE0EEtBzbsy2ELwCBD/AiVJIHYHYkNqOpCRkuYWUiaRAOJgaHSDwGEgPkWNTEItB4KACBCHAjEXlH8SGrqDJhe/AeKVQPwZyjcHYofBEsXIgA+Iw4CYH8q/BMR7IAE4OMrBT0C8AojfQfl6QOw52Ko6NiiGgS8DWQ6iA1EgDsGXWQbSgeLQ4oYTqYw8OdA1CQxIQh3HDuUfBOIzg6GqAwEZIA5ESnd7gfjCYKmL5aD1MSuoKIEWKZcGU2PBEslx24H4+mCrizmgIXgeiG9Su8FKi5pkZLWoKUqD9BgZG+12jjpw1IGjDhx14CAHAAEGAHaKSS1L3nVIAAAAAElFTkSuQmCC) right center no-repeat;
+	border-radius: 0 4px 4px 0;
+	background-size: 20px 20px;
+}
+
+#smart_input.open ~ #searchBtn{
+	opacity: 1;
+	pointer-events: auto;
+	cursor: default;
+	transition: opacity 0.2s linear,background 0.1s linear,color 0.1s linear;
+	transition-delay: 0.15s;
+}
+
+
+#searchBtn:hover,#searchBtn:focus{
+	color: black;
+	pointer-events: auto;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2dpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGQzdGMTE3NDA3MjA2ODExQjFBNDk0RjQ3NTg5QjEyNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QkIzRDZBMDI5NTIxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0QkIzRDY5RjI5NTIxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMkFGMDAzNDI0OTcxMUUzQjAzOUQ1MTdEREU1MkI1OSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMkFGMDAzNTI0OTcxMUUzQjAzOUQ1MTdEREU1MkI1OSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhIpJjgAAAE4SURBVHjaYvz//z/DYAZMDIMcjDpw1IGjDhx14Eh3IAslmhkZGUlST06tNSKimBuIS4HYdNBFMRRkA7EyECsBMRsQHx1sIbgeiH9AzYoFYsfB5sDbQNwPxF9B+QaII4DYY7AVMw+AuBeIP0H5gUDsP9jKwadA3APE76F8LyAOg4bqoCmoXwJxNxC/gfKdgTiaEntoUQ6+hTryBZRvC8QJg62q4wRiDiT+h4EsB9GBDBAXADEvlL8NiDcOFgfKQR3HDeVvAOLtA12TwACoJskFYi5QuwCI1wLx7sFQ1YGAKhDnQNMdyHErgPjAYKmLNaD1Mage/gfEy4D48GBqLPggOW4BEJ+kZqJmpGToA9pg5YKG4H4gPkPtBis1HDiyW9QUpUF6jIyNdjtHHTjqwFEHjjpwkAOAAAMAOO07gsXkikgAAAAASUVORK5CYII=) right center no-repeat;
+	background-color: rgba(0,0,0,0.05);
+	background-size: 20px 20px;
+}
+
+#searchHintWrapper{
+	height: 100%;
+	position: relative;
+	left: 50%;
+	text-align: center;
+	width: auto;
+	white-space: nowrap;
+	transition: all 0.2s ease-out;
+	display: inline-block;
+	-webkit-transform: translateX(-50%);
+	pointer-events: none;
+	opacity: 0.7;
+}
+#smart_input:hover ~ #searchHintWrapper{
+	opacity: 1;
+}
+#searchbarIcon{
+	width: 20px;
+	height: 20px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2tpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGQzdGMTE3NDA3MjA2ODExQjFBNDk0RjQ3NTg5QjEyNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjNBMDE5NDI5NEIxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjNBMDE5MzI5NEIxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1YTM1N2MxZi03ZWE4LTQ2NTctYmMzMi0yM2RjYTFkODdjOTIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTg5NzM3MTIwMzBDMTFFM0ExQjlDM0E2RkQzQTg0MDIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5nHzTDAAAB0ElEQVR42uyYvUoDQRDHc1ET/ABtxUIQwYiNvoJY2PpxNrEXEtT4FsbWBxAsbLTJK1jbaBItBBNQUCwVRAU5Z+R/sB7xcrd7E7e4gR8Hm7u5H9nd2eEcz/MyNoeTCqaCqaCmoOM4/yIU9LFe8GegE10iR2wQJ0SL+CBeiRuMubhHS/CXh4bgCnHLubrA96z2UrCPqCoCTWKPKBB5MIuxpnJfFc+KC/pyPJ1lIhvyHv5ti3hTJEUF1xW5pRgztohnPOQQEeTFfo+XlDTWfRnPPkTZODqCRbygEWctBdZuAzk2JQRPkbxiUN4qyHEmIdhG8oKBYAE52hKC70ieMxDMKZssccGXBARHdAWzEZI/4jplIDgZyBU5oghe4bpsIOjXzgvjwzmkzNQNykxdssyYFuqSUqjzUkedm8BR50o3CwcGzcIXnnckBXktHSptFB9fu8QMMUAME3MYq//RIx4R/dIN61qMhpU7mP3AeI0YlBT0N04RZyu3/J+ghbGiUth5Wo8DkufEmKSgTqmpBSQviXFbBDmG8M+pknfEtC2CHKM4mVTJJ2LBFkGOiQ6brGmTYAbT+qwI7tgmyDFPXBPbYWsw/TYjJph+H0wFexTfAgwAKHyUoherS4wAAAAASUVORK5CYII=) center center no-repeat;
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	margin-right: 0;
+	background-size: 20px 20px;
+}
+#searchHint{
+	height: 34px;
+	line-height: 34px;
+	display: inline-block;
+	opacity:1;
+	transition: opacity 0.2s linear;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+}
+
+#smart_input.open + #searchHintWrapper{
+	-webkit-transform: translateX(0%);
+	left: 8px;
+	opacity: 0;
+}
+
+#smart_input.open + #searchHintWrapper #searchHint,
+#smart_input.open + #searchHintWrapper #searchbarIcon {
+	opacity: 0;
+}
+/*---------------------*/
+
+#smart_input.open ~ #searchChange{
+	pointer-events: auto;
+	opacity: 1;
+	transition: opacity 0.2s linear;
+	transition-delay: 0.1s;
+}
+#searchChange{
+	position: absolute;
+	left: 0;
+	height: 30px;
+	line-height: 30px;
+	top: 0;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0s linear;
+	transition-delay: 0;
+}
+.searchChangeBtn {
+	width: 30px;
+	height: 100%;
+	display: inline-block;
+	padding: 2px 0 2px 8px;
+	margin: 0;
+	cursor: pointer;
+	position: relative;
+}
+
+.searchChangeBtn .searchEngineLogo{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	position: absolute;
+	top: 9px;
+}
+
+.searchChangeBtn .searchEngineLogo img{
+	position: absolute;
+}
+
+.searchChangeBtn .arrowsdown{
+	height:100%;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2dpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGQzdGMTE3NDA3MjA2ODExQjFBNDk0RjQ3NTg5QjEyNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2ODlCRDZCQjI5NTIxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2ODlCRDZCQTI5NTIxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0REEzREVEMDAzMTExMUUzQTFCOUMzQTZGRDNBODQwMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0REEzREVEMTAzMTExMUUzQTFCOUMzQTZGRDNBODQwMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoO3ER0AAACcSURBVHja7JQxCoAwDEVN8RQewPufRQdBZ52cXDqIxBQ6CZbEFgryA58O/c2jCQkxc1MjCGCAAQb4X2Aiykqeyt0q3veizsjcRHPK4BRJFtFugO7xTZMLDvWaRIfCe0QvlwCHuESjyCc8PnouTUJnKOEpGuJpucsGv/1KU41s8LOPlv4Xm+MwYsGwfpnjagsEuxpggAEGWB23AAMAPpl2OTfxxrUAAAAASUVORK5CYII=) right center no-repeat;
+	display: inline-block;
+	position: absolute;
+	top: 1px;
+	left: 22px;
+	cursor: pointer;
+	padding: 0 16px 0 0;
+	pointer-events: none;
+	color: #999;
+	background-size: 15px 16px;
+}
+
+.searchChangeBtn:hover .arrowsdown{
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2dpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGQzdGMTE3NDA3MjA2ODExQjFBNDk0RjQ3NTg5QjEyNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2ODlCRDZCRjI5NTIxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2ODlCRDZCRTI5NTIxMUUzOENGQkI1MkRGM0VFRTkyMiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0REEzREVEMDAzMTExMUUzQTFCOUMzQTZGRDNBODQwMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0REEzREVEMTAzMTExMUUzQTFCOUMzQTZGRDNBODQwMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmu3gZkAAAClSURBVHjaYvz//z/DQAAmhgECoxaPWjxq8ajFZAMWfJKMjIwUGY6vOGYhQr8NEGuRaOc1ID5CaVAfBeKHJFj6EKqH4jgGhddeIH5FhNpXULX/qZW4/gDxDiD+hEfNJ6iaP9RO1T+AeBuUJkWOKtkJm6+ICQ2q5GPkeCQl/lGzKr68RiAfa0EdfoWcfEyJxbQrQGjZEBytnUYtHrV41OKhZzFAgAEAmK02AP+PhzkAAAAASUVORK5CYII=) right center no-repeat;
+	background-size: 15px 16px;
+	color: #666;
+}
+
+.searchbox input{
+	-webkit-appearance:none;
+	outline: none;
+}
+
+
+
+.suggestlayerout ul,.suggestlayerouts ul{margin:0}
+
+
+.suggestlayerouts ul li{
+	width:134px;
+	height:26px;
+	padding:0 0 0 4px;
+	background-color:#fff;
+	line-height:26px;
+	position:relative;
+	cursor:pointer;
+}
+
+.suggestlayerouts ul li b{font-weight:bold}
+
+.suggestlayerout ul li{width:102px;height:26px;padding:0 0 0 33px;background-color:#fff;line-height:26px;position:relative;cursor:pointer}
+
+.suggestlayerout ul li:hover{background-color: RGB(235,241,245);
+}
+
+.suggestlayerouts ul .mouseover{background-color: RGB(235,241,245);
+}
+
+.suggestlayerouts ul .mouseout{background-color:#fff}
+
+.suggestlayerout ul li .icon{position:absolute;top:3px;left:8px}
+
+
+
+
+
+
+
+
+
+.searchnocolor{color:#808080}.searchencolor{color:#000} 
+
+
+
+.soso_SmartPop li{z-index:1000;}
+
+.soso_SmartPop div div{
+	height:26px;
+	line-height:26px;
+	font-size:15px;
+	text-decoration:none;
+	color:#000;
+	padding: 0;
+}
+.soso_SmartPop div div span{float:right;color:#39a200;padding-right:10px;}
+.soso_SmartPop strong{font-weight:bold;}
+.soso_SmartPop>div{
+	margin-left: -40px;
+	padding-left: 40px;
+}
+.soso_SmartPop div.mouseout{background:#fefefe;}
+.soso_SmartPop div.mouseover{background:RGB(235,241,245);cursor:pointer;} 
+
+
+
+
+
+/*
+	
+	@media screen and (max-width: 1115px){
+		.contain{
+			width: 22%;
+		}
+		.out{
+			max-width: 1115px;
+
+		}
+	}
+	.contain:active{
+		-webkit-transform: scale(0.98);
+	}
+	@media screen and (max-width: 875px){
+		.out{
+			width: 540px;
+		}
+	}
+	
+	*/
+	
+/*	.left{
+		width: 94px;
+		height: 190px;
+		border: 1px solid #ff0;
+		margin: 0;
+		position: absolute;
+		background: #fff;
+		top: -1px;
+		left: -1px;
+		opacity: 0.2;
+	}
+	.right{
+		width: 94px;
+		height: 190px;
+		border: 1px solid #0f0;
+		margin: 0;
+		position: absolute;
+		background: #fff;
+		top: -1px;
+		right: -1px;
+		opacity: 0.2;
+	}
+	*/
+
+
+	
+
+/*	.contain:hover .front{
+		-webkit-transform: rotateY(180deg);
+		transition: All 0.5s;
+	}
+	.contain:hover .backface{
+		background: #fcfcfc;
+		border: 1px solid #bbb;
+		-webkit-transform: rotateY(0deg);
+		-webkit-box-shadow: 0px 12px 24px rgba(0,0,0,.03);
+		transition: All 0.5s;
+	}*/
+	
+/*	.front .mask{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.02);
+	}*/
+	
+
+	
+/*	.left:hover{
+		border: 1px solid #00f;
+	}
+	.left:parent{
+		border: 1px solid #f00;
+	}
+	.right:hover{
+		border: 1px solid #00f;
+	}
+	.left:hover<.contain .front{
+		-webkit-transform: rotateY(180deg);
+	}
+	.left:hover<.contain .backface{
+		background: #fcfcfc;
+		-webkit-transform: rotateY(0deg);
+		-webkit-box-shadow: 0px 12px 12px rgba(0,0,0,.02);
+	}
+	.right:hover .front{
+		-webkit-transform: rotateY(180deg);
+	}
+	.right:hover .backface{
+		background: #fcfcfc;
+		-webkit-transform: rotateY(0deg);
+		-webkit-box-shadow: 0px 12px 12px rgba(0,0,0,.02);
+	}*/
+</style>
+	<link id="favicon" rel="icon shortcut" type="image/png" sizes="16x16" href="favicon_most_used_sites.png">
+	<link id="favicon2x" rel="icon shortcut" type="image/png" sizes="32x32" href="favicon_most_used_sites@2x.png">
+
+	<script src="jquery.js"></script>
+	<script src="newTab.js"></script>
+</head>
+<body style="">
+<div class="wrapper"><!--页面主容器-->
+	<div class="searchbox"><!--search box-->
+		<div class="inputarea">
+			<input id="smart_input" type="text" class="searchinput searchnocolor">
+			<div id="searchHintWrapper">
+				<div id="searchbarIcon"></div>
+				<div id="searchHint">Google 搜索</div>
+			</div>
+			<input type="button" id="searchBtn" class="searchsubmit" value="Google搜索">
+			<!--搜索提示-->
+			<div id="searchChange">
+				<div class="searchChangeBtn">
+					<div class="searchEngineLogo"><img src="newtab/favicon_search_google.png"></div>
+					<span class="arrowsdown"></span>
+				</div>
+				<div id="searchdropdown" class="suggestlayerout off" style="display: none;"><ul></ul></div>
+			</div>
+			<!--搜索提示-->
+		</div>
+		<ul id="poparea" class="hide"></ul>
+	</div>
+
+	<div class="out"><!--cell box-->
+		<img src="data:image/gif;base64,R0lGODlheAA3AIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFMDBFRUQ3RTI5M0YxMUUzQTA4OUMxODRGMTc1QUY1OSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFMDBFRUQ3RDI5M0YxMUUzQTA4OUMxODRGMTc1QUY1OSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5MkIxRUNFNjI4RjQxMUUzQTEwNERFQUI3QUZEOTBBRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5MkIxRUNFNzI4RjQxMUUzQTEwNERFQUI3QUZEOTBBRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAAALAAAAAB4ADcAAAJahI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6PVYAADs=" id="cellWrapperDummy"><!--用于保持宽高比撑开格子的容器-->
+		<a class="contain" href="http://google.cn/">
+			<div class="front">
+				<img class="thumbnail" src="thumb_sample.png">
+				<img src="data:image/gif;base64,R0lGODlhOAHuAIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDJCNUI4NzkyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDJCNUI4N0EyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MkI1Qjg3NzI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MkI1Qjg3ODI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAAALAAAAAA4Ae4AAAL/hI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8aNeRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYSpFgAAOw==" id="cellDummy"><!--此元素用于保持宽高比撑开格子容器-->
+				<!--div class="mask"></div-->
+			</div>
+			<div class="close" url="http://google.cn/"></div>
+			<div class="backface">
+				<!--div class="mask"></div-->
+				<div class="text">
+					<span class="title">Google</span>
+					<span class="url"></span>
+				</div>
+			</div>
+		</a>
+		<a class="contain" href="http://airasia.com/">
+			<div class="front">
+				<img class="thumbnail" src="thumb_sample.png">
+				<img src="data:image/gif;base64,R0lGODlhOAHuAIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDJCNUI4NzkyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDJCNUI4N0EyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MkI1Qjg3NzI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MkI1Qjg3ODI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAAALAAAAAA4Ae4AAAL/hI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8aNeRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYSpFgAAOw==" id="cellDummy"><!--此元素用于保持宽高比撑开格子容器-->
+				<!--div class="mask"></div-->
+			</div>
+			<div class="close" url="http://airasia.com/"></div>
+			<div class="backface">
+				<!--div class="mask"></div-->
+				<div class="text">
+					<span class="title">Air Asia</span>
+					<span class="url"></span>
+				</div>
+			</div>
+		</a>
+		<a class="contain" href="http://www.oa.com/">
+			<div class="front">
+				<img class="thumbnail" src="thumb_sample.png">
+				<img src="data:image/gif;base64,R0lGODlhOAHuAIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDJCNUI4NzkyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDJCNUI4N0EyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MkI1Qjg3NzI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MkI1Qjg3ODI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAAALAAAAAA4Ae4AAAL/hI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8aNeRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYSpFgAAOw==" id="cellDummy"><!--此元素用于保持宽高比撑开格子容器-->
+				<!--div class="mask"></div-->
+			</div>
+			<div class="close" url="http://www.oa.com/"></div>
+			<div class="backface">
+				<!--div class="mask"></div-->
+				<div class="text">
+					<span class="title">OA系统</span>
+					<span class="url"></span>
+				</div>
+			</div>
+		</a>
+		<a class="contain" href="http://bbs.browser.qq.com/">
+			<div class="front">
+				<img class="thumbnail" src="thumb_sample.png">
+				<img src="data:image/gif;base64,R0lGODlhOAHuAIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDJCNUI4NzkyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDJCNUI4N0EyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MkI1Qjg3NzI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MkI1Qjg3ODI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAAALAAAAAA4Ae4AAAL/hI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8aNeRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYSpFgAAOw==" id="cellDummy"><!--此元素用于保持宽高比撑开格子容器-->
+				<!--div class="mask"></div-->
+			</div>
+			<div class="close" url="http://bbs.browser.qq.com/"></div>
+			<div class="backface">
+				<!--div class="mask"></div-->
+				<div class="text">
+					<span class="title">QQ浏览器官方论坛</span>
+					<span class="url"></span>
+				</div>
+			</div>
+		</a>
+		<a class="contain" href="http://tieba.baidu.com/">
+			<div class="front">
+				<img class="thumbnail" src="thumb_sample.png">
+				<img src="data:image/gif;base64,R0lGODlhOAHuAIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDJCNUI4NzkyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDJCNUI4N0EyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MkI1Qjg3NzI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MkI1Qjg3ODI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAAALAAAAAA4Ae4AAAL/hI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8aNeRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYSpFgAAOw==" id="cellDummy"><!--此元素用于保持宽高比撑开格子容器-->
+				<!--div class="mask"></div-->
+			</div>
+			<div class="close" url="http://tieba.baidu.com/"></div>
+			<div class="backface">
+				<!--div class="mask"></div-->
+				<div class="text">
+					<span class="title">百度贴吧</span>
+					<span class="url"></span>
+				</div>
+			</div>
+		</a>
+		<a class="contain" href="http://dribbble.com/">
+			<div class="front">
+				<img class="thumbnail" src="thumb_sample.png">
+				<img src="data:image/gif;base64,R0lGODlhOAHuAIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDJCNUI4NzkyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDJCNUI4N0EyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MkI1Qjg3NzI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MkI1Qjg3ODI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAAALAAAAAA4Ae4AAAL/hI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8aNeRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYSpFgAAOw==" id="cellDummy"><!--此元素用于保持宽高比撑开格子容器-->
+				<!--div class="mask"></div-->
+			</div>
+			<div class="close" url="http://dribbble.com/"></div>
+			<div class="backface">
+				<!--div class="mask"></div-->
+				<div class="text">
+					<span class="title">Dribbble - Popular</span>
+					<span class="url"></span>
+				</div>
+			</div>
+		</a>
+		<a class="contain" href="http://jd.com/">
+			<div class="front">
+				<img class="thumbnail" src="thumb_sample.png">
+				<img src="data:image/gif;base64,R0lGODlhOAHuAIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDJCNUI4NzkyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDJCNUI4N0EyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MkI1Qjg3NzI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MkI1Qjg3ODI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAAALAAAAAA4Ae4AAAL/hI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8aNeRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYSpFgAAOw==" id="cellDummy"><!--此元素用于保持宽高比撑开格子容器-->
+				<!--div class="mask"></div-->
+			</div>
+			<div class="close" url="http://jd.com/"></div>
+			<div class="backface">
+				<!--div class="mask"></div-->
+				<div class="text">
+					<span class="title">京东网上商城</span>
+					<span class="url"></span>
+				</div>
+			</div>
+		</a>
+		<a class="contain" href="http://medium.com/">
+			<div class="front">
+				<img class="thumbnail" src="thumb_sample.png">
+				<img src="data:image/gif;base64,R0lGODlhOAHuAIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDJCNUI4NzkyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDJCNUI4N0EyOTQzMTFFMzhDRkJCNTJERjNFRUU5MjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MkI1Qjg3NzI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MkI1Qjg3ODI5NDMxMUUzOENGQkI1MkRGM0VFRTkyMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAAALAAAAAA4Ae4AAAL/hI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8aNeRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYSpFgAAOw==" id="cellDummy"><!--此元素用于保持宽高比撑开格子容器-->
+				<!--div class="mask"></div-->
+			</div>
+			<div class="close" url="http://medium.com/"></div>
+			<div class="backface">
+				<!--div class="mask"></div-->
+				<div class="text">
+					<span class="title">Medium</span>
+					<span class="url"></span>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>	
+</body></html>

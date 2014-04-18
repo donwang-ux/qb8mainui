@@ -2,41 +2,50 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>P R O T O T Y P E</title>
+	<title> P R O T O T Y P E / 1.4</title>
+	<link rel="shortcut icon" href="welcome/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="shared/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
-
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/appbox.css">
 </head>
-<body>
+<body id="view">
 <div class='wallpaper'></div>
-<div class="title">Prototype</div>
+<div id="webmask"></div>
+<div class="title">QQ Browser 8 / Prototype 1.4</div>
 <!-- <div class="shadow"></div> -->
-<div id="debug">
-	<button onclick="layout1()">tab上置</button>
-	<button onclick="layout2()">tab下置</button>
-	<button onclick="bookmarkbarshow()">显示书签栏</button>
-	<button onclick="bookmarkbarhide()">隐藏书签栏</button>
-</div>
+
 <div class="browser" id="browser">
 	<div class="bar" id="tabbar">
-		<ul id="tabs">
-			<li class="tab tab_current"><img class="favicon" src="http://www.baidu.com/favicon.ico"><span class="tabtitle">百度一下，你就知道</span><div class="tabclose"></div></li>
-			<li class="tab tab_back"><img class="favicon" src="http://mail.qq.com/favicon.ico"><span class="tabtitle">QQ邮箱</span><div class="tabclose"></div></li>
-			<li class="tab tab_back"><img class="favicon" src="http://www.zhihu.com/favicon.ico"><span class="tabtitle">首页 - 知乎</span><div class="tabclose"></div></li>
-			<li class="tab tab_back"><img class="favicon" src="http://www.douban.com/favicon.ico"><span class="tabtitle">豆瓣</span><div class="tabclose"></div></li>
-		</ul>
-		<div id="newTab"></div>
+
+			<ul id="tabs">
+				<li class="tab tab_current" tabcolor="browserdefault" title="Welcome"><img class="favicon" src="welcome/favicon.png"><span class="tabtitle">Welcome</span><div class="tabclose"></div></li>
+				<li class="tab tab_back" tabcolor="cobalt" title="百度一下，你就知道"><img class="favicon" src="http://www.baidu.com/favicon.ico"><span class="tabtitle">百度一下，你就知道</span><div class="tabclose"></div></li>
+				<li class="tab tab_back" tabcolor="orange" title="蚂蜂窝 - 旅游攻略分享网站"><img class="favicon" src="http://www.mafengwo.cn/favicon.ico"><span class="tabtitle">蚂蜂窝 - 旅游攻略分享网站</span><div class="tabclose"></div></li>
+				<!-- <li class="tab tab_back" tabcolor="blue" title="首页 - 知乎"><img class="favicon" src="http://www.zhihu.com/favicon.ico"><span class="tabtitle">首页 - 知乎</span><div class="tabclose"></div></li> -->
+				<li class="tab tab_back" tabcolor="gray" title="Apple"><img class="favicon" src="http://www.apple.com/favicon.ico"><span class="tabtitle">Apple</span><div class="tabclose"></div></li>
+				<li class="tab tab_back smallicon" tabcolor="mint" title="豆瓣"><img class="favicon" src="http://www.douban.com/favicon.ico"><span class="tabtitle">豆瓣</span><div class="tabclose"></div></li>
+<!-- 				<div id="tabList" title="查看全部标签"></div>
+				<div id="newTab" title="打开新页面"></div> -->
+			</ul>
+<!-- 		<div id="tabAction"> -->
+			<div id="tabList" class="hide panelBtn toggleBtn" title="查看全部标签"></div>
+			<div id="newTab" title="打开新页面"></div>
+		<!-- 	<div id="flex"></div> -->
+<!-- 		</div> -->
 	</div>
 
 	<div class="bar" id="toolbar">
-		<div class="btn btn_back disabled"><div class="btnicon"></div></div>
-		<div class="btn btn_forward disabled"><div class="btnicon"></div></div>
-		<div class="btn btn_refresh"><div class="btnicon"></div></div>
-		<div class="btn btn_homepage"><div class="btnicon"></div></div>
+		<div class="btn disabled left" id="btn_back" title="后退"><div class="btnicon"></div></div>
+		<div class="btn disabled left" id="btn_forward" title="前进"><div class="btnicon"></div></div>
+		<div class="btn left" id="btn_refresh" title="刷新"><div class="btnicon"></div></div>
+		<div class="btn left" id="btn_homepage" title="主页"><div class="btnicon"></div></div>
+		<div class="btn menuBtn toggleBtn left" id="btn_bookmark" title="书签"><div class="btnicon"></div></div>
 		
 		<div id="omnibox">
 			
-			<div class="omnibtn omnibtn_fav"></div>
+			<div class="omnibtn omnibtn_fav" title="添加书签"></div>
 			
 			<input id="omniinput" value="www.baidu.com"></input>
 
@@ -45,31 +54,85 @@
 			<!-- <div class="omnibtn omnibtn_qr"></div> -->
 			
 		</div>
-		<div class="btn btn_wechat"><div class="btnicon"></div></div>
-		<div class="btn btn_bookmark"><div class="btnicon"></div></div>
-		<div class="btn btn_appbox"><div class="btnicon"></div></div>
-		<div class="btn btn_menu"><div class="btnicon"></div></div>
+		<div class="btn sidebarBtn right" id="btn_wechat" title="微信聊天"><div class="btnicon"></div></div>
+		<div class="btn menuBtn toggleBtn right" id="btn_appbox" title="应用工具"><div class="btnicon"></div></div>
+
+		<div class="btn menuBtn toggleBtn right" id="btn_menu" title="主菜单"><div class="btnicon"></div></div>
 <!-- 		<div class="btn btn_download"></div>
 		<div class="btn btn_recover"></div>
 		<div class="btn btn_screenshot"></div>
 		<div class="btn btn_share"></div> -->
 	</div>
-	<div class="bar" id="bookmarkbar"></div>
-	<div class="floatbar" id="appbar"></div>
+	<div class="bar" id="bookmarkbar">
+		<DT><A HREF="http://daohang.qq.com/">上网导航</A>
+		<DT><A HREF="http://daohang.qq.com/">应用中心</A>
+		<DT><A HREF="http://daohang.qq.com/">登录微信</A>
+		<DT><A HREF="http://www.amazon.cn/">Amazon</A>
+            <DT><A HREF="http://www.ctrip.com/">携程旅行网</A>
+            <DT><A HREF="http://www.taobao.com">淘宝网</A>
+
+	</div>
 	<div id="sysbar"></div>
-	
+	<div id="tophotarea"></div>
+	<div class="sidebar left" id="sidebar">
+		<div class="sidebarItem" id="btn_wechat_sidebar"></div>
+		<div class="sidebarItem sidebarItemShow" id="bookmarkSidebarSwitch_sidebar"></div>
+	</div>
 	<div class="webview" id="web">
+		<iframe src="welcome/Welcome.html" width="100%" height="100%" id="frame1" class="frame showframe"></iframe>
 		<iframe src="http://www.baidu.com" width="100%" height="100%" id="frame1" class="frame showframe"></iframe>
-		<iframe src="http://mail.qq.com" width="100%" height="100%" id="frame2" class="frame"></iframe>
-		<iframe src="http://www.zhihu.com" width="100%" height="100%" id="frame3" class="frame"></iframe>
+		<iframe src="http://www.mafengwo.cn" width="100%" height="100%" id="frame2" class="frame"></iframe>
+		<!-- <iframe src="http://www.zhihu.com" width="100%" height="100%" id="frame3" class="frame"></iframe> -->
+		<iframe src="http://apple.com/cn/ipad-mini/" width="100%" height="100%" id="frame4" class="frame"></iframe>
 		<iframe src="http://www.douban.com" width="100%" height="100%" id="frame4" class="frame"></iframe>
 	</div>
 </div>
-
-
+<div class="panels">
+	<div class="panel panelHide" id="tabList_panel"></div>
+</div>
+<div class="menus">
+	<ul class="floatbox menuHide" id="btn_appbox_menu">
+		
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li id="addAppBtn"></li>
+	</ul>
+	<ul class="menu menuHide" id="btn_bookmark_menu">
+		<DT><A HREF="http://daohang.qq.com/">上网导航</A>
+		<DT><A HREF="http://daohang.qq.com/">应用中心</A>
+		<DT><A HREF="http://daohang.qq.com/">登录微信</A>
+		<DT><A HREF="http://www.amazon.cn/">Amazon</A>
+        <DT><A HREF="http://www.ctrip.com/">携程旅行网</A>
+        <DT><A HREF="http://www.taobao.com">淘宝网</A>
+	</ul>
+	<ul class="menu menuHide" id="btn_menu_menu">
+		<li id="fullScreenBtn">按 F11 全屏演示</li>
+		<li class="line"></li>
+		<li id="changeLayout">Tab下置</li>
+		<li class="line"></li>
+		<li id="bookmarkBarSwitch">显示书签栏</li>
+		<li class="line"></li>
+		<li class="sidebarBtn" id="bookmarkSidebarSwitch">切换书签侧边栏隐藏/显示</li>
+		<li class="line"></li>
+		<li id="changeSidebar">切换为右侧边栏</li>
+		<li class="line"></li>
+		<li onclick=document.execCommand("print")>打印</li>
+		<li onclick=window.external.showBrowserUI("PrivacySettings",null)>Internet选项</li>
+		<!-- <div id="mainColor"></div> -->
+	</ul>
+</div>
 <script type="text/javascript" src="shared/jquery.js"></script>
+<script type="text/javascript" src="./js/favicon.js"></script>
+<script type="text/javascript" src="./js/color.js"></script>
 <script type="text/javascript" src="./js/tabbar.js"></script>
 <script type="text/javascript" src="./js/toolbar.js"></script>
 <script type="text/javascript" src="./js/layout.js"></script>
+<script type="text/javascript" src="./js/fullscreen.js"></script>
+
+<script src="shared/less-1.5.0.min.js" type="text/javascript"></script>
 </body>
 </html>

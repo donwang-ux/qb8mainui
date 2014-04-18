@@ -1,0 +1,56 @@
+#bookmarkbar{
+	display: -webkit-box;
+	-webkit-box-align:center;
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+	height: 24px;
+	background: rgba(0,0,0,0.05);
+	background-clip: padding-box;
+	/*display: none;*/
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	transition: background linear 0.2s;
+	dt{
+		font-size: 12px;
+		padding: 0px 4px 0px 18px;
+		height: 18px;
+		line-height: 18px;
+		margin:2px 3px;
+		border-radius: 4px;
+		border: 1px solid transparent;
+		background-size: 12px;
+		background-repeat: no-repeat;
+		background-position: 2px center;
+		&:nth-child(1){margin-left:6px;background-image:url("http://daohang.qq.com/favicon.ico");}
+		&:nth-child(2){background-image:url("http://browser.qq.com/favicon.ico");}
+		&:nth-child(3){background-image:url("../images/favicon.ico");}
+		&:nth-child(4){background-image:url("http://www.amazon.cn/favicon.ico");}
+		&:nth-child(5){background-image:url("http://www.ctrip.com/favicon.ico");}
+		&:nth-child(6){background-image:url("http://www.taobao.com/favicon.ico");}
+		a{
+			text-decoration: none;
+			color: #737373;
+			&:hover{color:@darker50;}
+		}
+		&:hover{
+			/*border: 1px solid contrast(@color,@lighter10,@lighter50,50%);*/
+		}
+	}
+	.bar:nth-child(2):hover ~ &{
+		/*background:@lighter14!important;*/
+	}
+}
+
+#btn_bookmark_menu{
+	dt{
+		background-size: 16px;
+		background-repeat: no-repeat;
+		background-position: 8px center;
+		&:nth-child(1){background-image:url("http://daohang.qq.com/favicon.ico");}
+		&:nth-child(2){background-image:url("http://browser.qq.com/favicon.ico");}
+		&:nth-child(3){background-image:url("../images/favicon.ico");}
+		&:nth-child(4){background-image:url("http://www.amazon.cn/favicon.ico");}
+		&:nth-child(5){background-image:url("http://www.ctrip.com/favicon.ico");}
+		&:nth-child(6){background-image:url("http://www.taobao.com/favicon.ico");}
+	}
+}

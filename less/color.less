@@ -1,0 +1,177 @@
+@color: #cccccc;
+/*@color: #7be474;*/
+@lighter03: lighten(@color, 3%);
+@lighter05: lighten(@color, 5%);
+@lighter10: lighten(@color, 10%);
+@lighter12: lighten(@color, 12%);
+@lighter13: lighten(@color, 13%);
+@lighter14: lighten(@color, 14%);
+@lighter15: hsl(hue(@color),saturation(@color),96%);
+
+@lighter16: lighten(@color, 16%);
+@lighter17: lighten(@color, 17%);
+@lighter18: lighten(@color, 18%);
+@lighter19: hsl(hue(@color),saturation(@color),99%);
+@lighter20: lighten(@color, 20%);
+@lighter25: lighten(@color, 25%);
+@lighter30: lighten(@color, 30%);
+@lighter35: lighten(@color, 35%);
+@lighter40: lighten(@color, 40%);
+@lighter45: lighten(@color, 45%);
+@lighter50: lighten(@color, 50%);
+
+@darker01: darken(@color, 1%);
+@darker02: darken(@color, 2%);
+@darker03: darken(@color, 3%);
+@darker04: darken(@color, 4%);
+@darker05: darken(@color, 5%);
+@darker10: darken(@color, 10%);
+@darker12: darken(@color, 12%);
+@darker13: darken(@color, 13%);
+@darker14: darken(@color, 14%);
+@darker15: hsl(hue(@color),80%,50%);
+@darker20: darken(@color, 20%);
+@darker25: darken(@color, 25%);
+@darker30: darken(@color, 30%);
+@darker35: darken(@color, 35%);
+@darker40: darken(@color, 40%);
+@darker45: darken(@color, 45%);
+@darker50: darken(@color, 50%);
+@darker60: darken(@color, 60%);
+@darker70: darken(@color, 70%);
+@darker80: darken(@color, 80%);
+
+@colorLuma: luma(@color);
+@bar1Luma: luma(@lighter19);
+
+#mainColor:after{
+	content: "主色光度 @{colorLuma}";
+}
+.bar:first-child:after{
+	/*content: "顶栏光度 @{bar1Luma}";*/
+}
+
+.wallpaper{
+	/*background-color: @color;
+	.title{
+		color: contrast(@color,lighten(@color, 40%),darken(@color, 40%),50%);
+	}*/
+}
+
+
+
+#browser{
+	.bar{
+		&:first-child{
+			border-bottom: 1px solid #e0e0e0!important;
+			background: contrast(@color,@lighter19,@lighter50,50%)!important;
+		}
+		&:nth-child(2){
+			background-color: #f0f0f0!important;
+			/*border-bottom: 1px solid contrast(@color,@lighter05,@lighter50,50%)!important;*/
+			&:hover{
+				/*background-color: contrast(@color,@lighter14,@lighter50,50%)!important;*/
+				box-shadow: 0px -1px 0px 0px rgba(0,0,0,0.03),inset 0px 1px 0px 0px rgba(0,0,0,0.02)!important;
+				/*border-bottom: 1px solid #f5f5f5; */
+			}
+		}
+	}
+	&.tabup{
+
+		#toolbar{
+			.btn{
+				.btnicon{
+					/*background-color: contrast(@color,@darker35,@lighter50,50%)!important;*/
+					 /*background-color: hsl(220, 0%, 42%)!important;*/
+				}
+				&.disabled .btnicon{
+					background-color: contrast(@color,@color,@lighter50,50%)!important;
+				}
+			}
+			#omnibox{
+				/*&:hover{
+					background: contrast(@color,@lighter40,@lighter50,50%)!important;
+				}*/
+			}
+		}
+		#tabbar{
+			#tabs{
+				.tab{
+					/*color: #737373!important;*/
+					&:hover:not(.tab_current){
+						/*border: 1px solid contrast(@color,@lighter10,@lighter50,50%)!important;*/
+						/*color: desaturate(contrast(@color,@darker35,@lighter50,50%),50%)!important;*/
+						border-right-color: transparent;
+						/*background: #e8e8e8!important;*/
+					}
+					&.tab_current{
+						/*background: contrast(@color,@lighter12,@lighter50,50%)!important;*/
+						/*border: 1px solid contrast(@color,@lighter10,@lighter50,50%)!important;*/
+						/*color: contrast(@color,@darker80,@lighter50,50%)!important;*/
+						color:white!important;
+					}
+				}
+			}
+		}
+		#bookmarkbar{
+			background-color: #f0f0f0;
+			/*border-bottom: 1px solid contrast(@color,@lighter05,@lighter50,50%)!important;*/
+		}
+	}
+	&.tabdown{
+
+		#toolbar{
+			.btn{
+				.btnicon{
+					/*background-color: contrast(@color,@darker35,@lighter50,50%)!important;*/
+					/*background-color: hsl(220, 0%, 42%);*/
+				}
+				&.disabled .btnicon{
+					background-color: contrast(@color,@color,@lighter50,50%)!important;
+				}
+			}
+			#omnibox{
+				/*&:hover{
+					background: contrast(@color,@lighter40,@lighter50,50%)!important;
+				}*/
+			}
+		}
+		#tabbar{
+			#tabs{
+				.tab{
+					color: desaturate(contrast(@color,@darker25,@lighter50,50%),50%)!important;
+					&:hover:not(.tab_current){
+						border: 1px solid contrast(@color,@lighter10,@lighter50,50%)!important;
+						color: desaturate(contrast(@color,@darker35,@lighter50,50%),50%)!important;
+						background: #e8e8e8!important;
+					}
+					&.tab_current{
+						/*background: contrast(@color,@lighter12,@lighter50,50%)!important;*/
+						/*border: 1px solid contrast(@color,@lighter10,@lighter50,50%)!important;*/
+						/*color: contrast(@color,@darker80,@lighter50,50%)!important;*/
+						color:white!important;
+					}
+				}
+			}
+		}
+		#bookmarkbar{
+			background-color: #f0f0f0;
+			/*border-bottom: 1px solid contrast(@color,@lighter05,@lighter50,50%)!important;*/
+		}
+	}
+}
+
+
+/*
+#toolbar:hover #omnibox{
+					background: contrast(@color,@lighter17,@lighter50,50%);
+				}*/
+
+@import url('/bookmarkbar.less');
+
+/*.tab.tab_current{background: #51a9ff!important};*/
+/*.tab:nth-child(1).tab_current{background: #51a9ff!important};*/
+/*.tab:nth-child(2).tab_current{background: #6e85e8!important};*/
+/*.tab:nth-child(3).tab_current{background: #f6b900!important};*/
+/*.tab:nth-child(4).tab_current{background: #51a9ff!important};*/
+/*.tab:nth-child(5).tab_current{background: #61bb62!important};*/

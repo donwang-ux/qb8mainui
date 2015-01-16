@@ -1,0 +1,12 @@
+#bookmarkbar {
+  display: -webkit-box;
+  -webkit-box-align: center;
+
+}
+#bookmarkbar dt {
+  font-size: 11px;
+}
+#bookmarkbar dt a {
+  text-decoration: none;
+  color: #ccc;
+}

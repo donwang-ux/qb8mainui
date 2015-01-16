@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, ul, ol, div, h1, h2, h3, h4, p,table {margin: 0;padding: 0;border: 0 none;cursor:default;}
+html{background:#ffffff;overflow-x: hidden; overflow-y: hidden;} /*滚动条禁用*/
+body{padding:0;margin: 0 auto;font: 12px Helvetica,Arial,"Microsoft Yahei",SimSun,sans-serif;color: #333;overflow: hidden;}
+a:link,
+a:visited,
+a:hover,
+a:active{
+	cursor:pointer;
+	text-decoration:none;
+	color:#333;
+}
+.me-clear{clear:both}
+
+#me-container{
+	position: relative;
+	float:left;
+	left: auto;
+	margin-left:200px;
+	*margin-left: 100px;   /*IE6双倍*/
+	overflow:hidden;
+	padding-top:100px;
+	width:2000px;
+	}
+
+#me-wrapper{
+	position: relative;
+	left: auto;
+	}
+
+.me-column{
+	position: relative;
+	margin:0 60px 0 0;
+	padding:0px;
+	float:left;
+	width:410px;
+}
+
+.me-head{
+	font-size: 26px;
+	margin-bottom:10px;
+}
+
+.me-list {
+	margin:0;
+	padding:0}
+
+.me-listBox {
+	padding:20px 0;
+	border-bottom:1px #e5e5e5 solid;}
+
+/*.me-listTitle {
+	margin-bottom:15px;}*/
+.me-webIcon{
+	width:15px;
+	height:15px;
+	float:left;}
+.me-listTitle-title{
+	margin-left:5px;
+	font-size:14px;
+	font-weight: bold;
+	color:#000;
+	float:left;
+	}
+.me-listTitle-subTitle{
+	float:right;
+}
+.me-listTitle-subTitle a{
+	margin-left: 20px;
+	margin-top: 3px;
+	display: inline-block;
+	color:#8d8d8d;
+	*display:inline;
+	*zoom:1;
+}
+
+.me-listContent{     /*table*/
+	width:410px;
+	margin-top:15px;
+}
+.me-listSubTitle{    /*th*/
+	width:18px;	
+	padding:0px 10px;
+	color:#7a7a7a;
+	font-weight: 100;
+}
+.me-listContentBg{   /* td*/
+	padding: 15px 15px;
+	background-color: #CFEDFE;
+	
+}
+.me-listContentBg a{
+	color:#737373;
+}
+
+
+/***************listType css**********************/
+.me-listType1{
+	padding: 0;
+	height:22px;
+	line-height:22px;
+	width:342px;
+	cursor: pointer;
+	overflow: hidden;    /*超出时加省略号*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+.me-listType2-pic{
+	width:18%;
+	float: left;
+	/*display: inline-block;*/
+	/*border:1px #999 solid;*/
+	*display:inline;         /*IE  inline-block*/
+	*zoom:1;
+}
+.me-listType2-content{
+	width:27%;
+	padding-left:10px;
+	vertical-align: middle;
+	float: left;
+	/*display: inline-block;*/
+	/*height:37px;*/
+	/*border:1px #999 solid;*/
+	cursor:pointer;
+	*display:inline;
+	*zoom:1;
+}
+.me-listType2-content p{line-height:17px;cursor:pointer;}
+
+
+.me-listType3-pic{
+	width:60px;
+	height:80px;
+	float:left;
+	border:1px #999 solid;
+	*display:inline;
+	*zoom:1;
+}
+.me-listType3-title{
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.me-listType3-content{
+	width:255px;
+	padding:10px;
+	float:left;
+	height:60px;
+	border:1px #999 solid;
+	cursor:pointer;
+	*display:inline;
+	*zoom:1;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.me-listType4 {
+	display: inline-block;
+	margin-right:5px;
+	width: 48%;
+	height:22px;
+	line-height:22px;
+	cursor: pointer;
+	*display:inline;
+	*zoom:1;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/*并排三列*/
+.me-listType5 {
+	display: inline-block;
+	margin-right:5px;
+	width: 31%;
+	height:22px;
+	line-height:22px;
+	cursor: pointer;
+	*display:inline;
+	*zoom:1;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/***************listType css END ********************/
+
+
+
+/***************搜索框 css**************************/
+
+.me-search{
+	height: 28px;
+}
+
+/*.me-searchResult{
+	border:1px #e5e5e5 solid;
+	padding: 0 10px 10px 10px;
+	width: 293px;
+	z-index: 100;
+	position: relative;
+	top:-10px;
+	background-color: #ffffff;
+}
+.me-searchResult li{
+	border-bottom: 1px #e5e5e5 solid;
+	line-height: 25px;
+}*/
+#me-search-taobao input{
+	display: inline-block;
+	width:312px;
+	height:20px;
+	border:3px solid #fc451e;
+	margin:0;
+	*display:inline;
+	*zoom:1;
+	position: relative;
+	top:-9px;
+	*top:-1px;
+	}
+#me-search-taobao a{
+	display: inline-block;
+	width:88px;
+	height:28px;
+	margin:0;
+	*display:inline;
+	*zoom:1;
+	background:url(../image/s_taobao.png);
+	}
+
+#me-search-dianping input{
+	display: inline-block;
+	width:312px;
+	height:20px;
+	border:3px solid  #ff9a00;
+	margin:0;
+	*display:inline;
+	*zoom:1;
+	position: relative;
+	top:-9px;
+	*top:-1px;
+	}
+#me-search-dianping a{
+	display: inline-block;
+	width:88px;
+	height:28px;
+	margin:0;
+	*display:inline;
+	*zoom:1;
+	background:url(../image/s_dianping.png);
+	}
+/***************搜索框 css  END **************************/

@@ -1,71 +1,286 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Qb8mainui by donwang-ux</title>
+<head>
+	<meta charset="utf-8" />
+	<title> P R O T O T Y P E / 2.2</title>
+	<link rel="shortcut icon" href="welcome/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="shared/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/appbox.css">
+</head>
+<body id="view">
+<div class='wallpaper'></div>
+<div id="webmask"></div>
+<div class="title">QQ Browser 8 / Prototype 2.2</div>
+<div class="title2">mobile experience design center</div>
+<!-- <div class="shadow"></div> -->
+<!--div class="popup medium active" id="popup-download">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Qb8mainui</h1>
-        <p>QQ Browser 8 Main UI Prototype</p>
+	<div class="popup-titlebar">
+		<div class="popup-titlebar-icon"></div>
+		<div class="popup-titlebar-title">新建下载任务</div>
+		<div class="popup-titlebar-buttons">
+			<div class="sysbtn exitbtn" title="关闭"><div class="sysbtnicon"></div></div>
+		</div>
+	</div>
+	<div class="popup-content">
+		<div class="popup-content-row">
+			<div class="popup-content-title">文件名</div>
+			<input type="text" name="firstname" placeholder="QQ号码" />
+		</div>
+		<div class="popup-content-row">
+			<div class="popup-content-title">下载到</div>
+			<input type="text" name="lastname" placeholder="密码" />
+			<button>浏览文件夹</button>
+		</div>
+		<div class="popup-content-row additional">
+			
+			<label for="a1">复制链接地址  选择其他下载器</label> 
+		</div>
+	</div>
+	<div class="popup-command">
+		<div class="popup-command-btn main" id="popup-download-btn">下载</div>
+		<div class="popup-command-btn">直接打开</div>
+		<div class="popup-command-btn">取消</div>
+	</div>
+</div-->
 
-        <p class="view"><a href="https://github.com/donwang-ux/qb8mainui">View the Project on GitHub <small>donwang-ux/qb8mainui</small></a></p>
+<div class="popup medium active" id="popup-login">
+<!-- <div class="popup medium active hide"> -->
+	<div class="popup-titlebar">
+		<div class="popup-titlebar-icon"></div>
+		<!-- <div class="popup-titlebar-title">登录QQ浏览器</div> -->
+		<div class="popup-titlebar-buttons"><!-- 
+			<div class="sysbtn minbtn" title="最小化"><div class="sysbtnicon"></div></div>
+			<div class="sysbtn maxbtn" title="最大化"><div class="sysbtnicon"></div></div>
+			<div class="sysbtn restorebtn" title="向下还原"><div class="sysbtnicon"></div></div> -->
+			<div class="sysbtn exitbtn" title="关闭"><div class="sysbtnicon"></div></div>
+		</div>
+	</div>
+	<div class="popup-content">
+		<div class="popup-content-row" id="login-pic">
+			<img src="images/login.png">
+		</div>
+		<div class="popup-content-row">
+			<!-- <div class="popup-content-title">名称</div> -->
+			<input type="text" name="firstname" placeholder="QQ号码" />
+		</div>
+		<div class="popup-content-row">
+			<!-- <div class="popup-content-title">网址</div> -->
+			<input type="text" name="lastname" placeholder="密码" />
+		</div>
+		<div class="popup-content-row additional">
+			<input id="a1" type="checkbox" name="a" value="33023" /> 
+			<label for="a1">保持登录状态</label> 
+		</div>
+	</div>
+	<div class="popup-command">
+		<div class="popup-command-btn main" id="popup-login-btn">登录</div>
+		<!-- <div class="popup-command-btn">取消</div> -->
+	</div>
+</div>
+<!-- <div class="popup medium active" id="popup-normal"> -->
+<div class="popup medium active hide" id="popup-normal">
+	<div class="popup-titlebar">
+		<div class="popup-titlebar-icon"></div>
+		<div class="popup-titlebar-title">典型弹窗</div>
+		<div class="popup-titlebar-buttons"><!-- 
+			<div class="sysbtn minbtn" title="最小化"><div class="sysbtnicon"></div></div>
+			<div class="sysbtn maxbtn" title="最大化"><div class="sysbtnicon"></div></div>
+			<div class="sysbtn restorebtn" title="向下还原"><div class="sysbtnicon"></div></div> -->
+			<div class="sysbtn exitbtn" title="关闭"><div class="sysbtnicon"></div></div>
+		</div>
+	</div>
+	<div class="popup-content">
+		<div class="popup-content-row">
+			<div class="popup-content-title">名称</div>
+			<input type="text" name="firstname" value="这是一个示意名称" />
+		</div>
+		<div class="popup-content-row">
+			<div class="popup-content-title">网址</div>
+			<input type="text" name="lastname" value="http://www.sample.com" />
+		</div>
+		<div class="popup-content-row">
+			<div class="popup-content-title">位置</div>
+			<input type="text" name="user" />
+			<button>新建文件夹(N)...</button>
+		</div>
+		<!-- <div class="popup-content-row">
+			<div class="popup-content-line"></div>
+		</div> -->
+		<div class="popup-content-row additional">
+			<input id="a1" type="checkbox" name="a" value="33023" /> 
+			<label for="a1">下次不再提示</label> 
+		</div>
+	</div>
+	<div class="popup-command">
+		<div class="popup-command-btn main">确定</div>
+		<div class="popup-command-btn">取消</div>
+	</div>
+</div>
+<div class="browser" id="browser">
+	<div class="bar" id="tabbar">
 
+			<ul id="tabs">
+				<!-- <li class="tab tab_current" tabcolor="browserdefault" title="管理QQ浏览器"><img class="favicon" src="settings/favicon.png"><span class="tabtitle">管理QQ浏览器</span><div class="tabclose"></div></li> -->
+				<li class="tab tab_current" tabcolor="browserdefault" title="Welcome"><img class="favicon" src="welcome/favicon.png"><span class="tabtitle">Welcome</span><div class="tabclose"></div></li>
+				<li class="tab tab_back" tabcolor="cobalt" title="百度一下，你就知道"><img class="favicon" src="http://www.baidu.com/favicon.ico"><span class="tabtitle">百度一下，你就知道</span><div class="tabclose"></div></li>
+				<!-- <li class="tab tab_back" tabcolor="orange" title="小米手机官网——小米手机和小米电视唯一官方正品销售网站"><img class="favicon" src="http://www.xiaomi.com/favicon.ico"><span class="tabtitle">小米手机官网——小米手机和小米电视唯一官方正品销售网站</span><div class="tabclose"></div></li> -->
+				<li class="tab tab_back" tabcolor="blue" title="首页 - 知乎"><img class="favicon" src="http://www.zhihu.com/favicon.ico"><span class="tabtitle">首页 - 知乎</span><div class="tabclose"></div></li>
+				<li class="tab tab_back" tabcolor="gray" title="Apple"><img class="favicon" src="http://www.apple.com/favicon.ico"><span class="tabtitle">Apple</span><div class="tabclose"></div></li>
+				<!-- <li class="tab tab_back smallicon" tabcolor="mint" title="豆瓣"><img class="favicon" src="http://www.douban.com/favicon.ico"><span class="tabtitle">豆瓣</span><div class="tabclose"></div></li> -->
+<!-- 				<div id="tabList" title="查看全部标签"></div>
+				<div id="newTab" title="打开新页面"></div> -->
+			</ul>
+<!-- 		<div id="tabAction"> -->
+			
+			
+			<div id="newTab" title="打开新页面"></div>
+			<div id="tabList" class="hide panelBtn toggleBtn" title="查看全部标签">
+				<div id="tablistnumber">1</div>
+				<!-- <div id="tablisticon"></div> -->
+			</div>
+			<!-- <div id="undoTab" class="disabled" title="恢复关闭的页面"></div> -->
 
-        <ul>
-          <li><a href="https://github.com/donwang-ux/qb8mainui/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/donwang-ux/qb8mainui/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/donwang-ux/qb8mainui">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+		<!-- 	<div id="flex"></div> -->
+<!-- 		</div> -->
+	</div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+	<div class="bar" id="toolbar">
+		<div class="btn disabled left" id="btn_back" title="后退"><div class="btnicon"></div></div>
+		<div class="btn disabled left" id="btn_forward" title="前进"><div class="btnicon"></div></div>
+		<div class="btn left" id="btn_refresh" title="刷新"><div class="btnicon"></div></div>
+		<div class="btn left" id="btn_homepage" title="主页"><div class="btnicon"></div></div>
+		<!-- <div class="btn menuBtn toggleBtn left" id="btn_bookmark" title="书签"><div class="btnicon"></div></div> -->
+		<div class="btn sidebarBtn toggleBtn left" id="btn_bookmark" title="书签"><div class="btnicon"></div></div>
+		<div class="line"></div>
+		<div id="omnibox">
+			
+			
+			
+			<div class="omnibtn omnibtn_fav" title="添加书签"></div>
+			<!-- <div class="omnibtn omnibtn_safe">安全</div> -->
+			<div class="omnibtn omnibtn_sheild"></div>
+			<input id="omniinput" value="" placeholder="搜索或输入网址" ></input>
+			
+			
+			<!-- <div class="omnibtn omnibtn_refresh"></div> -->
+			<div class="omnibtn omnibtn_dropdown"></div>
+			<div class="omnibtn omnibtn_goto"></div>
+			
+			<!-- <div class="omnibtn omnibtn_qr"></div> -->
+			
+		</div>
+		<div class="line"></div>
+		<div id="searchbox" class="empty">
+			<input id="searchinput" placeholder="在此搜索"></input>
+			<div id="searchicon"></div>
+		</div>
+		<div class="line"></div>
+		<div class="btn" id="btn_undotab" title="恢复关闭的页面"><div class="btnicon"></div></div>
+		<div class="btn sidebarBtn right" id="btn_wechat" title="微信聊天"><div class="btnicon"></div></div>
+		<div class="btn" id="btn_qzone" title="QQ空间"><div class="btnicon"></div></div>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+		
+		<div class="btn" id="btn_download" title="下载管理"><div class="btnicon"></div></div>
+		<div class="btn menuBtn toggleBtn right" id="btn_appbox" title="应用工具"><div class="btnicon"></div></div>
+		<div class="line"></div>
+		<div class="btn menuBtn toggleBtn right" id="btn_menu" title="主菜单"><div class="btnicon"></div></div>
+<!-- 		<div class="btn btn_download"></div>
+		<div class="btn btn_recover"></div>
+		<div class="btn btn_screenshot"></div>
+		<div class="btn btn_share"></div> -->
+	</div>
+	<div class="bar" id="bookmarkbar">
+		<DT><A HREF="http://daohang.qq.com/">上网导航</A>
+		<DT><A HREF="http://daohang.qq.com/">应用中心</A>
+		<DT><A HREF="http://daohang.qq.com/">登录微信</A>
+		<DT><A HREF="http://www.amazon.cn/">Amazon</A>
+            <DT><A HREF="http://www.ctrip.com/">携程旅行网</A>
+            <DT><A HREF="http://www.taobao.com">淘宝网</A>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+	</div>
+	<div id="sysbar">
+		<div class="sysbtn userbtn" title="我"><div class="sysbtnicon"></div></div>
+		<div class="sysbtn minbtn" title="最小化"><div class="sysbtnicon"></div></div>
+		<div class="sysbtn maxbtn" title="最大化"><div class="sysbtnicon"></div></div>
+		<div class="sysbtn restorebtn" title="向下还原"><div class="sysbtnicon"></div></div>
+		<div class="sysbtn exitbtn" title="关闭"><div class="sysbtnicon"></div></div>
+	</div>
+	<div id="tophotarea"></div>
+	<div class="sidebar left" id="sidebar">
+		<div class="sidebarItem notFloat" id="btn_wechat_sidebar"></div>
+		<div class="sidebarItem sidebarItemShow" id="btn_bookmark_sidebar"></div>
+	</div>
+	<div class="webview" id="web">
+		<!-- <iframe src="manage/manage.html" width="100%" height="100%" id="" class="frame showframe"></iframe> -->
+		<iframe src="welcome/Welcome.html" width="100%" height="100%" id="" class="frame"></iframe>
+		<iframe src="http://www.baidu.com" width="100%" height="100%" id="" class="frame"></iframe>
+		<!-- <iframe src="http://www.xiaomi.com" target='_top' width="100%" height="100%" id="" class="frame"></iframe> -->
+		<iframe src="http://www.zhihu.com" width="100%" height="100%" id="frame3" class="frame"></iframe>
+		<iframe src="http://apple.com/cn/ipod/" width="100%" height="100%" id="" class="frame"></iframe>
+		<!-- <iframe src="http://www.douban.com" width="100%" height="100%" id="" class="frame"></iframe> -->
+	</div>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+</div>
+<div class="panels">
+	<div class="panel panelHide" id="tabList_panel"></div>
+	<div id="poparea" class="panel panelHide"></div>
+</div>
+<div class="menus">
+	<ul class="floatbox menuHide" id="btn_appbox_menu">
+		
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li id="addAppBtn"></li>
+	</ul>
+	<ul class="menu menuHide" id="btn_bookmark_menu">
+		<DT><A HREF="http://daohang.qq.com/">上网导航</A>
+		<DT><A HREF="http://daohang.qq.com/">应用中心</A>
+		<DT><A HREF="http://daohang.qq.com/">登录微信</A>
+		<DT><A HREF="http://www.amazon.cn/">Amazon</A>
+        <DT><A HREF="http://www.ctrip.com/">携程旅行网</A>
+        <DT><A HREF="http://www.taobao.com">淘宝网</A>
+	</ul>
+	<ul class="menu menuHide" id="btn_menu_menu">
+		<li id="fullScreenBtn">按 F11 全屏演示</li>
+		<li class="line"></li>
+		<li id="changeLayout">Tab下置</li>
+		<li class="line"></li>
+		<li id="bookmarkBarSwitch">显示书签栏</li>
+		<li class="line"></li>
+		<!-- <li class="sidebarBtn" id="bookmarkSidebarSwitch">切换书签侧边栏隐藏/显示</li> -->
+		<!-- <li class="line"></li> -->
+		<li id="changeSidebar">切换为右侧边栏</li>
+		<li class="line"></li>
+		<li onclick=document.execCommand("print")>打印</li>
+		<li onclick=window.external.showBrowserUI("PrivacySettings",null)>Internet选项</li>
+		<!-- <div id="mainColor"></div> -->
+	</ul>
+</div>
+<div class="animation-icons">
+	<div class="animation-icon" id="animation-download-icon"></div>
+</div>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<script type="text/javascript" src="shared/jquery.js"></script>
+<script type="text/javascript" src="shared/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="shared/jquery-ui-1.10.4.min.js"></script>
+<script type="text/javascript" src="./js/favicon.js"></script>
+<script type="text/javascript" src="./js/color.js"></script>
+<script type="text/javascript" src="./js/tabbar.js"></script>
+<script type="text/javascript" src="./js/toolbar.js"></script>
+<script type="text/javascript" src="./js/layout.js"></script>
+<script type="text/javascript" src="./js/fullscreen.js"></script>
+<script type="text/javascript" src="./js/login.js"></script>
+<script type="text/javascript" src="./js/download.js"></script>
+<script type="text/javascript" src="./js/omnibox.js"></script>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/donwang-ux">donwang-ux</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+<script src="shared/less-1.5.0.min.js" type="text/javascript"></script>
+</body>
 </html>

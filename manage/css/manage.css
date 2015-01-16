@@ -1,0 +1,406 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	-webkit-user-select:none;
+	/*background: #eee;*/
+	font-size: 14px;
+	line-height: 24px;
+}
+
+html,body,input,button{
+	font-family: 'Segoe UI','Microsoft yahei','微软雅黑',Tahoma,Verdana,Arial,sans-serif;
+}
+body{
+	overflow: auto;
+}
+
+.wrapper{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.3);
+	position: relative;
+	left:0;
+	/*margin-left: -480px;*/
+}
+
+#tabs-wrapper{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 220px;
+	padding: 42px 0 0 0;
+	overflow: auto;
+	border-right:1px solid #ddd;
+	background:rgba(0,0,0,0.03);
+	/*background: #f2f2f2;*/
+	/*border: 1px solid #.popup input[type="text"]:hoverccc;*/
+}
+#pages-wrapper{
+	position: absolute;
+	left: 221px;
+	right:0;
+	/*min-height: 100%;*/
+	
+	/*padding: 55px 0px 30px 60px;*/
+	/*width: 780px;*/
+}
+.page.hidepage{
+	display: none;
+}
+.page-header{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding:50px 50px 30px 50px;
+	font-size: 24px;
+}
+.group{
+	margin: 20px 0;
+	/*border-bottom: 1px dashed #e5e5e5;*/
+	padding: 0 50px 20px 50px;
+}
+.group-title{
+	color: #333;
+	font-weight: bold;
+	margin:0px 0px 5px 0;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: top;
+	width: 180px;
+}
+.group-content{
+	display: inline-block;
+}
+.group-content-box{
+	border:1px solid #ccc;
+	padding: 10px 10px;
+}
+.group-row{
+	margin:0 0 25px 0;
+}
+.tabicon{
+	width:24px;
+	height: 24px;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0.8);
+	display: inline-block;
+	margin:0 18px 0 0;
+	vertical-align: middle;
+	transition:background 0.2s linear;
+	-webkit-mask-position: center center;
+	-webkit-mask-size: 24px 24px;
+	-webkit-mask-repeat: no-repeat;
+}
+
+
+.tab-vertical:hover .tabicon{
+	background-color:hsl(210,70%,65%);
+}
+#tab1 .tabicon{
+	-webkit-mask-image: url('../images/history.png');
+}
+#tab2 .tabicon{
+	-webkit-mask-image: url('../images/apps.png');
+}
+#tab3 .tabicon{
+	-webkit-mask-image: url('../images/accounts.png');
+}
+#tab4 .tabicon{
+	-webkit-mask-image: url('../images/performance.png');
+}
+#tab5 .tabicon{
+	-webkit-mask-image: url('../images/help.png');
+}
+
+.tab-vertical{
+	font-size: 16px;
+	line-height: 56px;
+	/*margin:10px 0;*/
+	color:#555;
+	text-align: left;
+	padding: 0 35px 0 55px;
+	transition:color 0.2s linear;
+	/*border-right:1px solid #ddd;*/
+}
+.tab-vertical.first{
+	margin-top: -5px;
+}
+.tab-vertical.last{
+	margin-bottom: -5px;
+}
+.tab-vertical.notcurrent:hover{
+	/*color:#333;*/
+	color:hsl(210,70%,65%);
+}
+.tab-vertical.current{
+	color:hsl(210,100%,50%);
+	/*color:#444;*/
+	/*font-weight: bold;*/
+	/*border-right: 3px solid skyblue;*/
+	/*padding: 0 18px 0 0;*/
+	/*background-color: rgb(216,236,255);*/
+	/*background-color: #eee;*/
+	/*border:1px solid hsl(210,100%,66%);*/
+	/*border-radius: 2px;*/
+}
+
+.tab-vertical.current .tabicon{
+	background-color: hsl(210,100%,50%);
+}
+.day{
+	padding-left: 20px;
+	height:28px;
+	line-height: 28px;
+	/*margin-top: 10px;*/
+}
+.day-results.hide{
+	display: none;
+}
+.day-results.show{
+	display: block;
+}
+.day .bullet{
+	width:6px;
+	height: 6px;
+	border-radius: 4px;
+	background: #aaa;
+	display: inline-block;
+	margin: 0px 10px 0 -16px;
+	vertical-align: middle;
+}
+li.line{
+	height:1px;
+	background-color: rgba(0,0,0,0.1);
+	margin:10px 0;
+}
+.entry-box,
+.entry-box input,
+.entry-box .time,
+.entry-box .bookmark-section,
+.entry-box .visit-entry,
+.entry-box .visit-entry .title,
+.entry-box .visit-entry .domain,
+.entry-box button{
+	display: inline-block;
+}
+
+.entry-box{
+	width: 100%;
+	white-space: nowrap;
+	font-size: 12px;
+	position: relative;
+}
+.entry-box.selected{
+	background: #51a9ff;
+	color:white;
+}
+.entry-box:not(.selected):hover{
+	background: #d8ecff;
+}
+.entry-box:hover .visit-entry  .title a{
+	text-decoration: underline;
+}
+.entry-box .time{
+	width: 6%;
+	min-width: 70px;
+	height: 28px;
+	line-height: 28px;
+	vertical-align: middle;
+	color:#aaa;
+	margin-left: 20px;
+}
+.entry-box.selected .time{
+	color: white;
+}
+.entry-box .visit-entry{
+	width: 90%;
+	background-size: 16px 16px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 28px;
+	line-height: 28px;
+	vertical-align: middle;
+}
+.entry-box .visit-entry .title{
+	width: 50%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-left: 20px;
+	
+}
+.entry-box .visit-entry .title a{
+	text-decoration: none;
+	color: #333;
+}
+
+.entry-box.selected .visit-entry .title a{
+	color: #FFF;
+}
+.entry-box .visit-entry .domain{
+	width: 40%;
+	color:#aaa;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.entry-box.selected .visit-entry .domain{
+	color: white;
+}
+
+.entry-remove{
+	/*float: right;*/
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	margin-top: -8px;
+	background: white;
+	width: 16px;
+	height: 16px;
+	margin-right: -2px;
+	-webkit-mask-image: url('../../images/tabclose.png');
+	-webkit-mask-position: center center;
+	-webkit-mask-size: 16px 16px;
+	-webkit-mask-repeat: no-repeat;
+	/*border-radius: 8px;*/
+	display: inline-block;
+}
+
+.entry-box:not(.selected) .entry-remove{
+	visibility: hidden;
+}
+
+.entry-box:not(.selected):hover .entry-remove{
+	-webkit-mask-image: url('../../images/tabclose.png');
+	visibility: visible;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.entry-box:not(.selected):hover .entry-remove:hover{
+	-webkit-mask-image: url('../../images/tabclose-r.png');
+}
+.entry-box.selected:hover .entry-remove:hover{
+	-webkit-mask-image: url('../../images/tabclose-r.png');
+	background-color: white;
+}
+
+
+/*
+.entry-box:hover .entry-remove{
+	background: rgba(0,0,0,0.6);
+}
+.entry-box:hover .entry-remove:hover{
+	background: rgba(0,0,0,0.35);
+}*/
+
+.pagination div{
+	display: inline-block;
+	margin-right: 20px;
+	height:40px;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+.pagination div:hover{
+	text-decoration: underline;
+}
+
+.pagination .previous{
+	margin-right: 80px;
+}
+
+button{
+	border:1px solid rgba(0,0,0,0.25);
+	margin:0;
+	border-radius: 1px;
+	color:#333;
+}
+button:hover{
+	border-color:rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.04);
+}
+button.big{
+	padding:6px 12px;
+	font-size: 14px;
+}
+
+input[type="search"]{
+	/*border:1px solid rgba(0,0,0,0.25);*/
+	background-color: rgba(0,0,0,0.08);
+	margin:0;
+	border-radius: 1px;
+	color:#333;
+}
+input[type="search"].big{
+	padding:7px 4px;
+	font-size: 14px;
+}
+
+input[type="search"].instant{
+	padding-left: 26px;
+	background-image: url('../../images/searchicon.png');
+	background-size: 12px 12px;
+	background-repeat: no-repeat;
+	background-position: 12px center;
+}
+
+input#history-search{
+	width:320px;
+	float:right;
+}
+.onoffswitch-title{
+	display: inline-block;
+	height: 22px;
+	line-height: 22px;
+	vertical-align: middle;
+	width:250px;
+}
+.onoffswitch {
+	display: inline-block;
+    position: relative; width: 70px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    vertical-align: middle;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFF; border-radius: 3px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.1s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 22px; padding: 0; line-height: 22px;
+    font-size: 12px; color: white; 
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "已开启";
+    padding-left: 8px;
+    background-color: #51a9ff; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "已关闭";
+    padding-right: 8px;
+    background-color: #e5e5e5; color: #999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 14px; margin: 4px;
+    background: #FFFFFF;
+    border: 2px solid #FFFFF; border-radius: 2px;
+    position: absolute; top: 0; bottom: 0; right: 48px;
+    transition: all 0.1s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+#accounts-saved #accounts-saved-list,
+#accounts-ignored #accounts-ignored-list
+{
+	width:600px;
+}

@@ -1,0 +1,178 @@
+/*@color: #7be474;*/
+#mainColor:after {
+  content: "主色光度 80%";
+}
+.bar:first-child:after {
+  /*content: "顶栏光度 @{bar1Luma}";*/
+}
+.wallpaper {
+  /*background-color: @color;
+	.title{
+		color: contrast(@color,lighten(@color, 40%),darken(@color, 40%),50%);
+	}*/
+}
+#browser .bar:first-child {
+  border-bottom: 1px solid #bfbfbf!important;
+  background: #ebebeb!important;
+}
+#browser .bar:nth-child(2) {
+  background-color: #fcfcfc!important;
+  /*border-bottom: 1px solid contrast(@color,@lighter05,@lighter50,50%)!important;*/
+}
+#browser .bar:nth-child(2):hover {
+  /*background-color: contrast(@color,@lighter14,@lighter50,50%)!important;*/
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.03), inset 0px 1px 0px 0px rgba(0, 0, 0, 0.02) !important;
+  /*border-bottom: 1px solid #f5f5f5; */
+  background: #f8f8f8;
+}
+#browser.tabup #toolbar .btn .btnicon {
+  /*background-color: contrast(@color,@darker35,@lighter50,50%)!important;*/
+  /*background-color: hsl(220, 0%, 42%)!important;*/
+}
+#browser.tabup #toolbar .btn.disabled .btnicon {
+  background-color: #cccccc !important;
+}
+#browser.tabup #toolbar #omnibox {
+  /*&:hover{
+					background: contrast(@color,@lighter40,@lighter50,50%)!important;
+				}*/
+}
+#browser.tabup #tabbar #tabs .tab {
+  /*color: #737373!important;*/
+}
+#browser.tabup #tabbar #tabs .tab:hover:not(.tab_current) {
+  /*border: 1px solid contrast(@color,@lighter10,@lighter50,50%)!important;*/
+  /*color: desaturate(contrast(@color,@darker35,@lighter50,50%),50%)!important;*/
+  border-right-color: transparent;
+  /*background: #e8e8e8!important;*/
+}
+#browser.tabup #tabbar #tabs .tab.tab_current {
+  /*background: contrast(@color,@lighter12,@lighter50,50%)!important;*/
+  /*border: 1px solid contrast(@color,@lighter10,@lighter50,50%)!important;*/
+  /*color: contrast(@color,@darker80,@lighter50,50%)!important;*/
+  color: white!important;
+}
+#browser.tabup #bookmarkbar {
+  background-color: #fcfcfc;
+  /*border-bottom: 1px solid contrast(@color,@lighter05,@lighter50,50%)!important;*/
+}
+#browser.tabdown #toolbar .btn .btnicon {
+  /*background-color: contrast(@color,@darker35,@lighter50,50%)!important;*/
+  /*background-color: hsl(220, 0%, 42%);*/
+}
+#browser.tabdown #toolbar .btn.disabled .btnicon {
+  background-color: #cccccc !important;
+}
+#browser.tabdown #toolbar #omnibox {
+  /*&:hover{
+					background: contrast(@color,@lighter40,@lighter50,50%)!important;
+				}*/
+}
+#browser.tabdown #tabbar #tabs .tab {
+  color: #8c8c8c !important;
+}
+#browser.tabdown #tabbar #tabs .tab:hover:not(.tab_current) {
+  /*border: 1px solid contrast(@color,@lighter10,@lighter50,50%)!important;*/
+  color: #737373 !important;
+  background: #e8e8e8!important;
+}
+#browser.tabdown #tabbar #tabs .tab.tab_current {
+  /*background: contrast(@color,@lighter12,@lighter50,50%)!important;*/
+  /*border: 1px solid contrast(@color,@lighter10,@lighter50,50%)!important;*/
+  /*color: contrast(@color,@darker80,@lighter50,50%)!important;*/
+  color: white!important;
+}
+#browser.tabdown #bookmarkbar {
+  background-color: #ededed;
+  /*border-bottom: 1px solid contrast(@color,@lighter05,@lighter50,50%)!important;*/
+}
+/*
+#toolbar:hover #omnibox{
+					background: contrast(@color,@lighter17,@lighter50,50%);
+				}*/
+#bookmarkbar {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.05);
+  background-clip: padding-box;
+  /*display: none;*/
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: background linear 0.2s;
+}
+#bookmarkbar dt {
+  font-size: 12px;
+  padding: 0px 6px 0px 24px;
+  height: 18px;
+  line-height: 18px;
+  margin: 5px 3px 4px 3px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 4px center;
+}
+#bookmarkbar dt:nth-child(1) {
+  margin-left: 10px;
+  background-image: url("http://daohang.qq.com/favicon.ico");
+}
+#bookmarkbar dt:nth-child(2) {
+  background-image: url("http://browser.qq.com/favicon.ico");
+}
+#bookmarkbar dt:nth-child(3) {
+  background-image: url("../images/favicon.ico");
+}
+#bookmarkbar dt:nth-child(4) {
+  background-image: url("http://www.amazon.cn/favicon.ico");
+}
+#bookmarkbar dt:nth-child(5) {
+  background-image: url("http://www.ctrip.com/favicon.ico");
+}
+#bookmarkbar dt:nth-child(6) {
+  background-image: url("http://www.taobao.com/favicon.ico");
+}
+#bookmarkbar dt a {
+  text-decoration: none;
+  color: #666;
+}
+#bookmarkbar dt a:hover {
+  color: #000;
+}
+#bookmarkbar dt:hover {
+  /*border: 1px solid contrast(@color,@lighter10,@lighter50,50%);*/
+}
+.bar:nth-child(2):hover ~ #bookmarkbar {
+  /*background:@lighter14!important;*/
+}
+#btn_bookmark_menu dt {
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+}
+#btn_bookmark_menu dt:nth-child(1) {
+  background-image: url("http://daohang.qq.com/favicon.ico");
+}
+#btn_bookmark_menu dt:nth-child(2) {
+  background-image: url("http://browser.qq.com/favicon.ico");
+}
+#btn_bookmark_menu dt:nth-child(3) {
+  background-image: url("../images/favicon.ico");
+}
+#btn_bookmark_menu dt:nth-child(4) {
+  background-image: url("http://www.amazon.cn/favicon.ico");
+}
+#btn_bookmark_menu dt:nth-child(5) {
+  background-image: url("http://www.ctrip.com/favicon.ico");
+}
+#btn_bookmark_menu dt:nth-child(6) {
+  background-image: url("http://www.taobao.com/favicon.ico");
+}
+/*.tab.tab_current{background: #51a9ff!important};*/
+/*.tab:nth-child(1).tab_current{background: #51a9ff!important};*/
+/*.tab:nth-child(2).tab_current{background: #6e85e8!important};*/
+/*.tab:nth-child(3).tab_current{background: #f6b900!important};*/
+/*.tab:nth-child(4).tab_current{background: #51a9ff!important};*/
+/*.tab:nth-child(5).tab_current{background: #61bb62!important};*/
